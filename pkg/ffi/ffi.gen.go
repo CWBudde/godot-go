@@ -205,7 +205,7 @@ func (x *GDExtensionInterface) LoadProcAddresses(
 ) {
 	x.GetProcAddress = pGetProcAddress
 	x.Library = pLibrary
-	x.Token = unsafe.Pointer(&pLibrary)
+	x.Token = unsafe.Pointer(pLibrary)
 
 	x.GetGodotVersion = (GDExtensionInterfaceGetGodotVersion)(LoadProcAddress("get_godot_version"))
 	x.GetGodotVersion2 = (GDExtensionInterfaceGetGodotVersion2)(LoadProcAddress("get_godot_version2"))

@@ -51,6 +51,7 @@ func WrappedPostInitialize(extensionClassName string, w Wrapped) {
 	if !ok {
 		log.Panic("unable to retrieve binding callbacks", zap.String("type", extensionClassName))
 	}
+	pnr.Pin(callbacks)
 	cnPtr := snExtensionClassName.AsGDExtensionConstStringNamePtr()
 	obj, ok := w.(Object)
 	if !ok {
@@ -60,7 +61,6 @@ func WrappedPostInitialize(extensionClassName string, w Wrapped) {
 		Instance: obj,
 	}
 	pnr.Pin(obj)
-	pnr.Pin(owner)
 	pnr.Pin(inst)
 	pnr.Pin(cnPtr)
 	instHandle := cgo.NewHandle(inst)
@@ -75,7 +75,7 @@ func WrappedPostInitialize(extensionClassName string, w Wrapped) {
 		(GDExtensionObjectPtr)(owner),
 		unsafe.Pointer(FFI.Token),
 		instHandle,
-		&callbacks,
+		callbacks,
 	)
 }
 

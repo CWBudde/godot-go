@@ -89,8 +89,9 @@ func New{{ $c.Name }}{{ with $con.Arguments }}With{{- range $k, $arg := $con.Arg
 ) {{ $c.Name }} {
     cx := {{ $c.Name }}{}
     ptr := (GDExtensionUninitializedTypePtr)(cx.NativePtr())
-    pnr.Pin(ptr)
     {{ if $con.Arguments -}}
+    p := runtime.Pinner{}
+    defer p.Unpin()
     var args [{{ len $con.Arguments }}]GDExtensionConstTypePtr
     {{ range $k, $arg := $con.Arguments -}}
         {{ $argName := goArgumentName $arg.Name -}}
@@ -111,12 +112,11 @@ func New{{ $c.Name }}{{ with $con.Arguments }}With{{- range $k, $arg := $con.Arg
         arg{{ $k }} := {{ $argName }}.GetGodotObjectOwner()
         args[{{ $k }}] = (GDExtensionConstTypePtr)(&arg{{ $k }})
         {{ else -}}
-        args[{{ $k }}] = (GDExtensionConstTypePtr)({{ goEncoder $argType }}.EncodeTypePtr({{ $argName }}))
-        {{ end -}}
-        pnr.Pin(args[{{ $k }}])
-        {{ end -}}
-	{{ end -}}
-    {{ end -}}
+                args[{{ $k }}] = (GDExtensionConstTypePtr)({{ goEncoder $argType }}.EncodeTypePtr({{ $argName }}))
+                {{ end -}}
+        	{{ end -}}
+            p.Pin(args[{{ $k }}])
+            {{ end -}}    {{ end -}}
     CallBuiltinConstructor(global{{ $c.Name }}MethodBindings.constructor_{{ $j }}, ptr, {{range $k, $arg := $con.Arguments -}}args[{{ $k }}],{{- end -}})
     log.Debug("CallBuiltinConstructor after", zap.String("name", "global{{ $c.Name }}MethodBindings.constructor_{{ $j }}"), zap.Any("cx", cx))
     return cx
@@ -127,7 +127,6 @@ func New{{ $c.Name }}{{ with $con.Arguments }}With{{- range $k, $arg := $con.Arg
 func (cx *{{ $c.Name }}) Destroy() {
     md := (GDExtensionPtrDestructor)(global{{ $c.Name }}MethodBindings.destructor)
     bx := cx.NativePtr()
-    pnr.Pin(bx)
     CallFunc_GDExtensionPtrDestructor(md, bx)
 }
 {{ end }}
@@ -148,6 +147,10 @@ func (cx *{{ $c.Name }}) {{ goMethodName $m.Name }}(
         varargs ...Variant
     {{- end -}}
 ) {{ $fnReturnType }} {
+    {{ if or (not $m.IsStatic) $hasSomeArguments -}}
+    p := runtime.Pinner{}
+    defer p.Unpin()
+    {{ end -}}
     mb := global{{ $c.Name }}MethodBindings.method_{{ $m.Name }}
     if mb == nil {
         log.Panic("method bind cannot be nil")
@@ -156,11 +159,11 @@ func (cx *{{ $c.Name }}) {{ goMethodName $m.Name }}(
     bx := (GDExtensionTypePtr)(nullptr)
     {{ else -}}
     bx := cx.NativePtr()
-    {{ end -}}
-    pnr.Pin(bx)
     if bx == nil {
         log.Panic("object cannot be nil")
     }
+    p.Pin(bx)
+    {{ end -}}
     {{ if $hasSomeArguments -}}
     sz := {{ len $m.Arguments -}} {{ if $m.IsVararg -}} + len(varargs) + 1 {{- end }}
 	args := make([]GDExtensionTypePtr, sz, sz)
@@ -179,13 +182,13 @@ func (cx *{{ $c.Name }}) {{ goMethodName $m.Name }}(
     {{ else -}}
     args[{{ $j }}] = (GDExtensionTypePtr)(&{{ goArgumentName $arg.Name }})
     {{ end }}
-    pnr.Pin(args[{{ $j }}])
+    p.Pin(args[{{ $j }}])
     {{ end -}}{{/* range $m.Arguments */}}
 
     {{ if $m.IsVararg -}}
     for i := range varargs {
         args[i + {{ len $m.Arguments }}] = (GDExtensionTypePtr)(&varargs[i])
-        pnr.Pin(args[i + {{ len $m.Arguments }}])
+        p.Pin(args[i + {{ len $m.Arguments }}])
     }
     {{ end -}}
 
@@ -206,11 +209,16 @@ func (cx *{{ $c.Name }}) {{ goMethodName $m.Name }}(
 
 {{ if $c.IsKeyed -}}
 func (cx *{{ $c.Name }}) GetKeyed(key string) Variant {
+    p := runtime.Pinner{}
+    defer p.Unpin()
     gdStrKey := NewStringWithUtf8Chars(key)
     defer gdStrKey.Destroy()
     vKey := NewVariantString(gdStrKey)
     defer vKey.Destroy()
     var ret Variant
+    p.Pin(cx.NativeConstPtr())
+    p.Pin(vKey.AsGDExtensionConstTypePtr())
+    p.Pin(ret.AsGDExtensionTypePtr())
     CallFunc_GDExtensionPtrKeyedGetter(
         global{{ $c.Name }}MethodBindings.keyed_getter,
         cx.NativeConstPtr(),
@@ -221,10 +229,15 @@ func (cx *{{ $c.Name }}) GetKeyed(key string) Variant {
 }
 
 func (cx *{{ $c.Name }}) SetKeyed(key string, value Variant) {
+    p := runtime.Pinner{}
+    defer p.Unpin()
     gdStrKey := NewStringWithUtf8Chars(key)
     defer gdStrKey.Destroy()
     vKey := NewVariantString(gdStrKey)
     defer vKey.Destroy()
+    p.Pin(cx.NativePtr())
+    p.Pin(vKey.AsGDExtensionConstTypePtr())
+    p.Pin(value.AsGDExtensionConstTypePtr())
     CallFunc_GDExtensionPtrKeyedSetter(
         global{{ $c.Name }}MethodBindings.keyed_setter,
         cx.NativePtr(),
@@ -236,7 +249,11 @@ func (cx *{{ $c.Name }}) SetKeyed(key string, value Variant) {
 
 {{ if gt (len $c.IndexingReturnType) 0 -}}
 func (cx *{{ $c.Name }}) GetIndexed(i int64) {{ goReturnType $c.IndexingReturnType }} {
+    p := runtime.Pinner{}
+    defer p.Unpin()
     var ret {{ goReturnType $c.IndexingReturnType }}
+    p.Pin(cx.NativeConstPtr())
+    p.Pin(&ret)
     CallFunc_GDExtensionPtrIndexedGetter(
         global{{ $c.Name }}MethodBindings.indexed_getter,
         cx.NativeConstPtr(),
@@ -247,6 +264,10 @@ func (cx *{{ $c.Name }}) GetIndexed(i int64) {{ goReturnType $c.IndexingReturnTy
 }
 
 func (cx *{{ $c.Name }}) SetIndexed(i int64, value {{ goReturnType $c.IndexingReturnType }}) {
+    p := runtime.Pinner{}
+    defer p.Unpin()
+    p.Pin(cx.NativePtr())
+    p.Pin(&value)
     CallFunc_GDExtensionPtrIndexedSetter(
         global{{ $c.Name }}MethodBindings.indexed_setter,
         cx.NativePtr(),

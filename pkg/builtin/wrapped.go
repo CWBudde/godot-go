@@ -71,14 +71,13 @@ func ObjectCastTo(obj Object, className string) Object {
 	if casted == nil {
 		return nil
 	}
-	cbs, ok := GDExtensionBindingGDExtensionInstanceBindingCallbacks.Get(className)
+	cbsPtr, ok := GDExtensionBindingGDExtensionInstanceBindingCallbacks.Get(className)
 	if !ok {
 		log.Warn("unable to find callbacks for Object",
 			zap.String("name", className),
 		)
 		return nil
 	}
-	cbsPtr := &cbs
 	pnr.Pin(casted)
 	pnr.Pin(cbsPtr)
 	// TODO: validate this is working as expected
@@ -86,15 +85,18 @@ func ObjectCastTo(obj Object, className string) Object {
 		casted,
 		FFI.Token,
 		cbsPtr)
-	wci := (*WrappedClassInstance)(inst)
-	wrapperClassName := wci.Instance.GetClassName()
-	gdStrClassName := wci.Instance.GetClass()
+	instPtr := (*Object)(inst)
+	if instPtr == nil || *instPtr == nil {
+		log.Panic("ObjectCastTo: instance binding unexpectedly nil", zap.String("type", className))
+	}
+	wrapperClassName := (*instPtr).GetClassName()
+	gdStrClassName := (*instPtr).GetClass()
 	defer gdStrClassName.Destroy()
 	log.Info("ObjectCastTo casted",
 		zap.String("class", gdStrClassName.ToUtf8()),
 		zap.String("className", wrapperClassName),
 	)
-	return wci.Instance
+	return *instPtr
 }
 
 type WrappedClassInstance struct {

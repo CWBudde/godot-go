@@ -31,7 +31,7 @@ var (
 	variantFromTypeConstructor                            [GDEXTENSION_VARIANT_TYPE_VARIANT_MAX]GDExtensionVariantFromTypeConstructorFunc
 	typeFromVariantConstructor                            [GDEXTENSION_VARIANT_TYPE_VARIANT_MAX]GDExtensionTypeFromVariantConstructorFunc
 	nullptr                                               = unsafe.Pointer(nil)
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks = NewSyncMap[string, GDExtensionInstanceBindingCallbacks]()
+	GDExtensionBindingGDExtensionInstanceBindingCallbacks = NewSyncMap[string, *GDExtensionInstanceBindingCallbacks]()
 	pnr                                                   = runtime.Pinner{}
 )
 
@@ -62,5 +62,5 @@ func GDClassRegisterInstanceBindingCallbacks(tn string) {
 	if ok {
 		log.Panic("Class with the same name already initialized", zap.String("class", tn))
 	}
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set(tn, (GDExtensionInstanceBindingCallbacks)(cbs))
+	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set(tn, &cbs)
 }

@@ -7,6 +7,7 @@ import "C"
 
 import (
 	"fmt"
+	"runtime"
 	"unsafe"
 
 	. "github.com/godot-go/godot-go/pkg/ffi"
@@ -17,7 +18,6 @@ import (
 
 func NewStringNameWithGDExtensionConstStringNamePtr(ptr GDExtensionConstStringNamePtr) StringName {
 	cx := StringName{}
-	pnr.Pin(&cx)
 	typedSrc := (*[StringNameSize]uint8)(ptr)
 	for i := 0; i < StringNameSize; i++ {
 		cx[i] = typedSrc[i]
@@ -29,13 +29,15 @@ func NewStringNameWithLatin1Chars(content string) StringName {
 	cx := String{}
 	defer cx.Destroy()
 	ptr := (GDExtensionUninitializedStringPtr)(cx.NativePtr())
-	pnr.Pin(ptr)
 	// log.Debug("create string name",
 	// 	zap.String("ptr", fmt.Sprintf("%p", ptr)),
 	// 	zap.Uintptr("ptr_int", uintptr(ptr)),
 	// 	zap.Any("text", content),
 	// 	zap.Any("cx", cx),
 	// )
+	p := runtime.Pinner{}
+	p.Pin(&cx)
+	defer p.Unpin()
 	CallFunc_GDExtensionInterfaceStringNewWithLatin1Chars(ptr, content)
 	// log.Debug("create string name after",
 	// 	zap.String("ptr", fmt.Sprintf("%p", ptr)),
@@ -50,12 +52,14 @@ func NewStringNameWithUtf8Chars(content string) StringName {
 	cx := String{}
 	defer cx.Destroy()
 	ptr := (GDExtensionUninitializedStringPtr)(cx.NativePtr())
-	pnr.Pin(ptr)
 	log.Debug("create string name",
 		zap.String("ptr", fmt.Sprintf("%p", ptr)),
 		zap.Uintptr("ptr_int", uintptr(unsafe.Pointer(ptr))),
 		zap.Any("text", content),
 	)
+	p := runtime.Pinner{}
+	p.Pin(&cx)
+	defer p.Unpin()
 	CallFunc_GDExtensionInterfaceStringNewWithUtf8Chars(ptr, content)
 	return NewStringNameWithString(cx)
 }
@@ -74,7 +78,6 @@ func (cx StringName) ToUtf8() string {
 
 func (cx *StringName) AsGDExtensionConstStringNamePtr() GDExtensionConstStringNamePtr {
 	ptr := (GDExtensionConstStringNamePtr)(cx)
-	pnr.Pin(ptr)
 	return ptr
 }
 
@@ -89,7 +92,9 @@ func GDExtensionStringPtrWithLatin1Chars(ptr GDExtensionStringPtr, content strin
 func NewStringWithLatin1Chars(content string) String {
 	cx := String{}
 	ptr := (GDExtensionUninitializedStringPtr)(cx.NativePtr())
-	pnr.Pin(ptr)
+	p := runtime.Pinner{}
+	p.Pin(&cx)
+	defer p.Unpin()
 	CallFunc_GDExtensionInterfaceStringNewWithLatin1Chars(ptr, content)
 	return cx
 }
@@ -97,7 +102,9 @@ func NewStringWithLatin1Chars(content string) String {
 func NewStringWithUtf8Chars(content string) String {
 	cx := String{}
 	ptr := (GDExtensionUninitializedStringPtr)(cx.NativePtr())
-	pnr.Pin(ptr)
+	p := runtime.Pinner{}
+	p.Pin(&cx)
+	defer p.Unpin()
 	CallFunc_GDExtensionInterfaceStringNewWithUtf8Chars(ptr, content)
 	return cx
 }
@@ -105,24 +112,23 @@ func NewStringWithUtf8Chars(content string) String {
 func NewStringWithUtf32Char(content Char32T) String {
 	cx := String{}
 	ptr := (GDExtensionUninitializedStringPtr)(cx.NativePtr())
-	pnr.Pin(ptr)
+	p := runtime.Pinner{}
+	p.Pin(&cx)
+	defer p.Unpin()
 	CallFunc_GDExtensionInterfaceStringNewWithUtf32Chars(ptr, &content)
 	return cx
 }
 
 func (cx *String) AsGDExtensionConstStringPtr() GDExtensionConstStringPtr {
 	ptr := (GDExtensionConstStringPtr)(cx)
-	pnr.Pin(ptr)
 	return ptr
 }
 
 func (cx String) ToAscii() string {
 	ptr := (GDExtensionConstStringPtr)(cx.NativeConstPtr())
-	pnr.Pin(ptr)
 	size := CallFunc_GDExtensionInterfaceStringToLatin1Chars(ptr, (*Char)(nullptr), (GDExtensionInt)(0))
 	cstrSlice := make([]C.char, int(size)+1)
 	cstr := unsafe.SliceData(cstrSlice)
-	pnr.Pin(cstr)
 	CallFunc_GDExtensionInterfaceStringToLatin1Chars((GDExtensionConstStringPtr)(ptr), (*Char)(cstr), (GDExtensionInt)(size+1))
 	ret := C.GoString(cstr)[:]
 	return ret
@@ -130,7 +136,6 @@ func (cx String) ToAscii() string {
 
 func (cx String) ToUtf8() string {
 	ptr := (GDExtensionConstStringPtr)(cx.NativeConstPtr())
-	pnr.Pin(ptr)
 	size := CallFunc_GDExtensionInterfaceStringToUtf8Chars(ptr, (*Char)(nullptr), (GDExtensionInt)(0))
 	cstrSlice := make([]C.char, int(size)+1)
 	cstr := unsafe.SliceData(cstrSlice)
@@ -141,7 +146,6 @@ func (cx String) ToUtf8() string {
 	// 	}
 	// 	CallFunc_GDExtensionPtrDestructor(stringDestructor, (GDExtensionTypePtr)(cstr))
 	// }()
-	pnr.Pin(cstr)
 	CallFunc_GDExtensionInterfaceStringToUtf8Chars(ptr, (*Char)(cstr), (GDExtensionInt)(size+1))
 	ret := C.GoString(cstr)[:]
 	return ret

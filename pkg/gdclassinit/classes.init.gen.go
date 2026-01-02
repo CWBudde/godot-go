@@ -24,5832 +24,7774 @@ import (
 
 func RegisterEngineClasses() {
 	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Clear()
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AESContext",
-		NewGDExtensionInstanceBindingCallbacks(
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AESContext),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AESContext),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AESContext),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AStar2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AESContext", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AStar2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AStar2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AStar2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AStar3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AStar2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AStar3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AStar3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AStar3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AStarGrid2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AStar3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AStarGrid2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AStarGrid2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AStarGrid2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AcceptDialog",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AStarGrid2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AcceptDialog),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AcceptDialog),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AcceptDialog),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AimModifier3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AcceptDialog", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AimModifier3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AimModifier3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AimModifier3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimatableBody2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AimModifier3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimatableBody2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimatableBody2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimatableBody2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimatableBody3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimatableBody2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimatableBody3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimatableBody3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimatableBody3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimatedSprite2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimatableBody3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimatedSprite2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimatedSprite2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimatedSprite2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimatedSprite3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimatedSprite2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimatedSprite3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimatedSprite3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimatedSprite3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimatedTexture",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimatedSprite3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimatedTexture),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimatedTexture),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimatedTexture),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Animation",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimatedTexture", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Animation),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Animation),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Animation),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationLibrary",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Animation", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationLibrary),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationLibrary),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationLibrary),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationMixer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationLibrary", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationMixer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationMixer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationMixer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNode",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationMixer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationNode),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationNode),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationNode),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeAdd2",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNode", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationNodeAdd2),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationNodeAdd2),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationNodeAdd2),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeAdd3",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeAdd2", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationNodeAdd3),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationNodeAdd3),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationNodeAdd3),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeAnimation",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeAdd3", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationNodeAnimation),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationNodeAnimation),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationNodeAnimation),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeBlend2",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeAnimation", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationNodeBlend2),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationNodeBlend2),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationNodeBlend2),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeBlend3",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeBlend2", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationNodeBlend3),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationNodeBlend3),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationNodeBlend3),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeBlendSpace1D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeBlend3", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationNodeBlendSpace1D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationNodeBlendSpace1D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationNodeBlendSpace1D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeBlendSpace2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeBlendSpace1D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationNodeBlendSpace2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationNodeBlendSpace2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationNodeBlendSpace2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeBlendTree",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeBlendSpace2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationNodeBlendTree),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationNodeBlendTree),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationNodeBlendTree),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeBlendTree", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationNodeExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationNodeExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationNodeExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeOneShot",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationNodeOneShot),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationNodeOneShot),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationNodeOneShot),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeOutput",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeOneShot", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationNodeOutput),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationNodeOutput),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationNodeOutput),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeStateMachine",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeOutput", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationNodeStateMachine),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationNodeStateMachine),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationNodeStateMachine),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeStateMachinePlayback",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeStateMachine", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationNodeStateMachinePlayback),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationNodeStateMachinePlayback),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationNodeStateMachinePlayback),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeStateMachineTransition",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeStateMachinePlayback", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationNodeStateMachineTransition),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationNodeStateMachineTransition),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationNodeStateMachineTransition),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeSub2",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeStateMachineTransition", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationNodeSub2),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationNodeSub2),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationNodeSub2),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeSync",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeSub2", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationNodeSync),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationNodeSync),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationNodeSync),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeTimeScale",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeSync", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationNodeTimeScale),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationNodeTimeScale),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationNodeTimeScale),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeTimeSeek",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeTimeScale", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationNodeTimeSeek),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationNodeTimeSeek),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationNodeTimeSeek),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeTransition",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeTimeSeek", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationNodeTransition),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationNodeTransition),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationNodeTransition),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationPlayer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationNodeTransition", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationPlayer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationPlayer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationPlayer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationRootNode",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationPlayer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationRootNode),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationRootNode),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationRootNode),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationTree",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationRootNode", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AnimationTree),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AnimationTree),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AnimationTree),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Area2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AnimationTree", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Area2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Area2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Area2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Area3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Area2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Area3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Area3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Area3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ArrayMesh",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Area3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ArrayMesh),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ArrayMesh),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ArrayMesh),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ArrayOccluder3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ArrayMesh", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ArrayOccluder3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ArrayOccluder3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ArrayOccluder3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AspectRatioContainer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ArrayOccluder3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AspectRatioContainer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AspectRatioContainer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AspectRatioContainer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AtlasTexture",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AspectRatioContainer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AtlasTexture),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AtlasTexture),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AtlasTexture),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioBusLayout",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AtlasTexture", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioBusLayout),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioBusLayout),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioBusLayout),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffect",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioBusLayout", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffect),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffect),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffect),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectAmplify",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffect", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectAmplify),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectAmplify),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectAmplify),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectBandLimitFilter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectAmplify", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectBandLimitFilter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectBandLimitFilter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectBandLimitFilter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectBandPassFilter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectBandLimitFilter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectBandPassFilter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectBandPassFilter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectBandPassFilter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectCapture",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectBandPassFilter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectCapture),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectCapture),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectCapture),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectChorus",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectCapture", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectChorus),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectChorus),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectChorus),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectCompressor",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectChorus", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectCompressor),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectCompressor),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectCompressor),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectDelay",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectCompressor", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectDelay),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectDelay),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectDelay),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectDistortion",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectDelay", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectDistortion),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectDistortion),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectDistortion),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectEQ",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectDistortion", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectEQ),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectEQ),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectEQ),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectEQ10",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectEQ", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectEQ10),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectEQ10),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectEQ10),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectEQ21",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectEQ10", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectEQ21),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectEQ21),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectEQ21),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectEQ6",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectEQ21", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectEQ6),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectEQ6),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectEQ6),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectFilter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectEQ6", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectFilter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectFilter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectFilter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectHardLimiter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectFilter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectHardLimiter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectHardLimiter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectHardLimiter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectHighPassFilter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectHardLimiter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectHighPassFilter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectHighPassFilter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectHighPassFilter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectHighShelfFilter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectHighPassFilter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectHighShelfFilter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectHighShelfFilter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectHighShelfFilter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectInstance",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectHighShelfFilter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectInstance),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectInstance),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectInstance),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectLimiter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectInstance", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectLimiter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectLimiter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectLimiter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectLowPassFilter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectLimiter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectLowPassFilter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectLowPassFilter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectLowPassFilter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectLowShelfFilter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectLowPassFilter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectLowShelfFilter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectLowShelfFilter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectLowShelfFilter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectNotchFilter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectLowShelfFilter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectNotchFilter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectNotchFilter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectNotchFilter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectPanner",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectNotchFilter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectPanner),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectPanner),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectPanner),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectPhaser",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectPanner", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectPhaser),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectPhaser),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectPhaser),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectPitchShift",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectPhaser", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectPitchShift),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectPitchShift),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectPitchShift),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectRecord",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectPitchShift", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectRecord),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectRecord),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectRecord),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectReverb",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectRecord", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectReverb),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectReverb),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectReverb),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectSpectrumAnalyzer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectReverb", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectSpectrumAnalyzer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectSpectrumAnalyzer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectSpectrumAnalyzer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectSpectrumAnalyzerInstance",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectSpectrumAnalyzer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectSpectrumAnalyzerInstance),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectSpectrumAnalyzerInstance),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectSpectrumAnalyzerInstance),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectStereoEnhance",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectSpectrumAnalyzerInstance", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioEffectStereoEnhance),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioEffectStereoEnhance),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioEffectStereoEnhance),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioListener2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioEffectStereoEnhance", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioListener2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioListener2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioListener2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioListener3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioListener2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioListener3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioListener3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioListener3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioSample",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioListener3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioSample),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioSample),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioSample),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioSamplePlayback",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioSample", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioSamplePlayback),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioSamplePlayback),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioSamplePlayback),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioServer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioSamplePlayback", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioServer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioServer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioServer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStream",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioServer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioStream),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioStream),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioStream),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamGenerator",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStream", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioStreamGenerator),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioStreamGenerator),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioStreamGenerator),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamGeneratorPlayback",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamGenerator", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioStreamGeneratorPlayback),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioStreamGeneratorPlayback),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioStreamGeneratorPlayback),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamInteractive",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamGeneratorPlayback", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioStreamInteractive),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioStreamInteractive),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioStreamInteractive),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamMP3",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamInteractive", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioStreamMP3),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioStreamMP3),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioStreamMP3),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamMicrophone",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamMP3", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioStreamMicrophone),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioStreamMicrophone),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioStreamMicrophone),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamOggVorbis",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamMicrophone", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioStreamOggVorbis),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioStreamOggVorbis),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioStreamOggVorbis),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPlayback",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamOggVorbis", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioStreamPlayback),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioStreamPlayback),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioStreamPlayback),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPlaybackInteractive",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPlayback", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioStreamPlaybackInteractive),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioStreamPlaybackInteractive),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioStreamPlaybackInteractive),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPlaybackOggVorbis",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPlaybackInteractive", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioStreamPlaybackOggVorbis),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioStreamPlaybackOggVorbis),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioStreamPlaybackOggVorbis),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPlaybackPlaylist",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPlaybackOggVorbis", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioStreamPlaybackPlaylist),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioStreamPlaybackPlaylist),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioStreamPlaybackPlaylist),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPlaybackPolyphonic",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPlaybackPlaylist", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioStreamPlaybackPolyphonic),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioStreamPlaybackPolyphonic),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioStreamPlaybackPolyphonic),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPlaybackResampled",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPlaybackPolyphonic", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioStreamPlaybackResampled),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioStreamPlaybackResampled),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioStreamPlaybackResampled),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPlaybackSynchronized",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPlaybackResampled", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioStreamPlaybackSynchronized),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioStreamPlaybackSynchronized),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioStreamPlaybackSynchronized),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPlayer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPlaybackSynchronized", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioStreamPlayer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioStreamPlayer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioStreamPlayer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPlayer2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPlayer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioStreamPlayer2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioStreamPlayer2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioStreamPlayer2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPlayer3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPlayer2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioStreamPlayer3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioStreamPlayer3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioStreamPlayer3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPlaylist",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPlayer3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioStreamPlaylist),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioStreamPlaylist),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioStreamPlaylist),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPolyphonic",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPlaylist", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioStreamPolyphonic),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioStreamPolyphonic),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioStreamPolyphonic),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamRandomizer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamPolyphonic", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioStreamRandomizer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioStreamRandomizer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioStreamRandomizer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamSynchronized",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamRandomizer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioStreamSynchronized),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioStreamSynchronized),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioStreamSynchronized),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamWAV",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamSynchronized", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_AudioStreamWAV),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_AudioStreamWAV),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_AudioStreamWAV),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("BackBufferCopy",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("AudioStreamWAV", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_BackBufferCopy),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_BackBufferCopy),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_BackBufferCopy),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("BaseButton",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("BackBufferCopy", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_BaseButton),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_BaseButton),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_BaseButton),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("BaseMaterial3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("BaseButton", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_BaseMaterial3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_BaseMaterial3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_BaseMaterial3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("BitMap",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("BaseMaterial3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_BitMap),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_BitMap),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_BitMap),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Bone2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("BitMap", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Bone2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Bone2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Bone2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("BoneAttachment3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Bone2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_BoneAttachment3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_BoneAttachment3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_BoneAttachment3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("BoneConstraint3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("BoneAttachment3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_BoneConstraint3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_BoneConstraint3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_BoneConstraint3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("BoneMap",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("BoneConstraint3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_BoneMap),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_BoneMap),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_BoneMap),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("BoxContainer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("BoneMap", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_BoxContainer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_BoxContainer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_BoxContainer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("BoxMesh",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("BoxContainer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_BoxMesh),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_BoxMesh),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_BoxMesh),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("BoxOccluder3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("BoxMesh", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_BoxOccluder3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_BoxOccluder3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_BoxOccluder3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("BoxShape3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("BoxOccluder3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_BoxShape3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_BoxShape3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_BoxShape3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Button",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("BoxShape3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Button),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Button),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Button),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ButtonGroup",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Button", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ButtonGroup),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ButtonGroup),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ButtonGroup),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CPUParticles2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ButtonGroup", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CPUParticles2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CPUParticles2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CPUParticles2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CPUParticles3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CPUParticles2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CPUParticles3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CPUParticles3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CPUParticles3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CSGBox3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CPUParticles3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CSGBox3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CSGBox3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CSGBox3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CSGCombiner3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CSGBox3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CSGCombiner3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CSGCombiner3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CSGCombiner3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CSGCylinder3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CSGCombiner3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CSGCylinder3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CSGCylinder3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CSGCylinder3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CSGMesh3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CSGCylinder3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CSGMesh3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CSGMesh3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CSGMesh3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CSGPolygon3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CSGMesh3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CSGPolygon3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CSGPolygon3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CSGPolygon3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CSGPrimitive3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CSGPolygon3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CSGPrimitive3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CSGPrimitive3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CSGPrimitive3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CSGShape3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CSGPrimitive3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CSGShape3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CSGShape3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CSGShape3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CSGSphere3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CSGShape3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CSGSphere3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CSGSphere3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CSGSphere3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CSGTorus3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CSGSphere3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CSGTorus3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CSGTorus3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CSGTorus3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CallbackTweener",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CSGTorus3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CallbackTweener),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CallbackTweener),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CallbackTweener),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Camera2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CallbackTweener", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Camera2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Camera2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Camera2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Camera3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Camera2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Camera3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Camera3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Camera3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CameraAttributes",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Camera3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CameraAttributes),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CameraAttributes),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CameraAttributes),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CameraAttributesPhysical",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CameraAttributes", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CameraAttributesPhysical),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CameraAttributesPhysical),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CameraAttributesPhysical),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CameraAttributesPractical",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CameraAttributesPhysical", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CameraAttributesPractical),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CameraAttributesPractical),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CameraAttributesPractical),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CameraFeed",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CameraAttributesPractical", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CameraFeed),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CameraFeed),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CameraFeed),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CameraServer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CameraFeed", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CameraServer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CameraServer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CameraServer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CameraTexture",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CameraServer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CameraTexture),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CameraTexture),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CameraTexture),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CanvasGroup",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CameraTexture", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CanvasGroup),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CanvasGroup),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CanvasGroup),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CanvasItem",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CanvasGroup", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CanvasItem),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CanvasItem),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CanvasItem),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CanvasItemMaterial",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CanvasItem", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CanvasItemMaterial),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CanvasItemMaterial),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CanvasItemMaterial),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CanvasLayer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CanvasItemMaterial", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CanvasLayer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CanvasLayer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CanvasLayer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CanvasModulate",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CanvasLayer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CanvasModulate),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CanvasModulate),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CanvasModulate),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CanvasTexture",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CanvasModulate", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CanvasTexture),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CanvasTexture),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CanvasTexture),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CapsuleMesh",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CanvasTexture", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CapsuleMesh),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CapsuleMesh),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CapsuleMesh),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CapsuleShape2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CapsuleMesh", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CapsuleShape2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CapsuleShape2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CapsuleShape2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CapsuleShape3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CapsuleShape2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CapsuleShape3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CapsuleShape3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CapsuleShape3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CenterContainer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CapsuleShape3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CenterContainer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CenterContainer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CenterContainer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CharFXTransform",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CenterContainer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CharFXTransform),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CharFXTransform),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CharFXTransform),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CharacterBody2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CharFXTransform", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CharacterBody2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CharacterBody2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CharacterBody2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CharacterBody3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CharacterBody2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CharacterBody3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CharacterBody3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CharacterBody3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CheckBox",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CharacterBody3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CheckBox),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CheckBox),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CheckBox),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CheckButton",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CheckBox", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CheckButton),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CheckButton),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CheckButton),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CircleShape2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CheckButton", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CircleShape2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CircleShape2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CircleShape2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ClassDB",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CircleShape2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ClassDB),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ClassDB),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ClassDB),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CodeEdit",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ClassDB", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CodeEdit),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CodeEdit),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CodeEdit),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CodeHighlighter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CodeEdit", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CodeHighlighter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CodeHighlighter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CodeHighlighter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CollisionObject2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CodeHighlighter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CollisionObject2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CollisionObject2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CollisionObject2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CollisionObject3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CollisionObject2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CollisionObject3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CollisionObject3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CollisionObject3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CollisionPolygon2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CollisionObject3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CollisionPolygon2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CollisionPolygon2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CollisionPolygon2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CollisionPolygon3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CollisionPolygon2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CollisionPolygon3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CollisionPolygon3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CollisionPolygon3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CollisionShape2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CollisionPolygon3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CollisionShape2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CollisionShape2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CollisionShape2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CollisionShape3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CollisionShape2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CollisionShape3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CollisionShape3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CollisionShape3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ColorPalette",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CollisionShape3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ColorPalette),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ColorPalette),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ColorPalette),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ColorPicker",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ColorPalette", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ColorPicker),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ColorPicker),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ColorPicker),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ColorPickerButton",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ColorPicker", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ColorPickerButton),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ColorPickerButton),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ColorPickerButton),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ColorRect",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ColorPickerButton", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ColorRect),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ColorRect),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ColorRect),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Compositor",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ColorRect", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Compositor),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Compositor),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Compositor),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CompositorEffect",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Compositor", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CompositorEffect),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CompositorEffect),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CompositorEffect),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CompressedCubemap",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CompositorEffect", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CompressedCubemap),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CompressedCubemap),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CompressedCubemap),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CompressedCubemapArray",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CompressedCubemap", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CompressedCubemapArray),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CompressedCubemapArray),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CompressedCubemapArray),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CompressedTexture2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CompressedCubemapArray", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CompressedTexture2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CompressedTexture2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CompressedTexture2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CompressedTexture2DArray",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CompressedTexture2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CompressedTexture2DArray),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CompressedTexture2DArray),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CompressedTexture2DArray),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CompressedTexture3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CompressedTexture2DArray", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CompressedTexture3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CompressedTexture3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CompressedTexture3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CompressedTextureLayered",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CompressedTexture3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CompressedTextureLayered),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CompressedTextureLayered),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CompressedTextureLayered),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ConcavePolygonShape2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CompressedTextureLayered", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ConcavePolygonShape2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ConcavePolygonShape2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ConcavePolygonShape2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ConcavePolygonShape3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ConcavePolygonShape2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ConcavePolygonShape3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ConcavePolygonShape3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ConcavePolygonShape3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ConeTwistJoint3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ConcavePolygonShape3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ConeTwistJoint3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ConeTwistJoint3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ConeTwistJoint3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ConfigFile",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ConeTwistJoint3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ConfigFile),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ConfigFile),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ConfigFile),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ConfirmationDialog",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ConfigFile", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ConfirmationDialog),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ConfirmationDialog),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ConfirmationDialog),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Container",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ConfirmationDialog", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Container),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Container),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Container),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Control",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Container", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Control),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Control),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Control),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ConvertTransformModifier3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Control", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ConvertTransformModifier3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ConvertTransformModifier3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ConvertTransformModifier3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ConvexPolygonShape2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ConvertTransformModifier3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ConvexPolygonShape2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ConvexPolygonShape2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ConvexPolygonShape2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ConvexPolygonShape3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ConvexPolygonShape2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ConvexPolygonShape3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ConvexPolygonShape3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ConvexPolygonShape3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CopyTransformModifier3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ConvexPolygonShape3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CopyTransformModifier3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CopyTransformModifier3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CopyTransformModifier3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Crypto",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CopyTransformModifier3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Crypto),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Crypto),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Crypto),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CryptoKey",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Crypto", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CryptoKey),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CryptoKey),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CryptoKey),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Cubemap",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CryptoKey", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Cubemap),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Cubemap),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Cubemap),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CubemapArray",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Cubemap", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CubemapArray),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CubemapArray),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CubemapArray),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Curve",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CubemapArray", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Curve),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Curve),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Curve),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Curve2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Curve", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Curve2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Curve2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Curve2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Curve3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Curve2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Curve3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Curve3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Curve3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CurveTexture",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Curve3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CurveTexture),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CurveTexture),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CurveTexture),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CurveXYZTexture",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CurveTexture", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CurveXYZTexture),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CurveXYZTexture),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CurveXYZTexture),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CylinderMesh",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CurveXYZTexture", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CylinderMesh),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CylinderMesh),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CylinderMesh),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CylinderShape3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CylinderMesh", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_CylinderShape3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_CylinderShape3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_CylinderShape3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("DPITexture",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("CylinderShape3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_DPITexture),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_DPITexture),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_DPITexture),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("DTLSServer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("DPITexture", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_DTLSServer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_DTLSServer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_DTLSServer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("DampedSpringJoint2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("DTLSServer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_DampedSpringJoint2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_DampedSpringJoint2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_DampedSpringJoint2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Decal",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("DampedSpringJoint2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Decal),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Decal),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Decal),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("DirAccess",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Decal", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_DirAccess),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_DirAccess),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_DirAccess),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("DirectionalLight2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("DirAccess", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_DirectionalLight2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_DirectionalLight2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_DirectionalLight2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("DirectionalLight3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("DirectionalLight2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_DirectionalLight3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_DirectionalLight3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_DirectionalLight3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("DisplayServer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("DirectionalLight3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_DisplayServer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_DisplayServer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_DisplayServer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ENetConnection",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("DisplayServer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ENetConnection),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ENetConnection),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ENetConnection),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ENetMultiplayerPeer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ENetConnection", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ENetMultiplayerPeer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ENetMultiplayerPeer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ENetMultiplayerPeer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ENetPacketPeer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ENetMultiplayerPeer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ENetPacketPeer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ENetPacketPeer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ENetPacketPeer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorCommandPalette",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ENetPacketPeer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorCommandPalette),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorCommandPalette),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorCommandPalette),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorContextMenuPlugin",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorCommandPalette", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorContextMenuPlugin),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorContextMenuPlugin),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorContextMenuPlugin),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorDebuggerPlugin",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorContextMenuPlugin", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorDebuggerPlugin),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorDebuggerPlugin),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorDebuggerPlugin),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorDebuggerSession",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorDebuggerPlugin", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorDebuggerSession),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorDebuggerSession),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorDebuggerSession),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlatform",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorDebuggerSession", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorExportPlatform),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorExportPlatform),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorExportPlatform),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlatformAndroid",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlatform", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorExportPlatformAndroid),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorExportPlatformAndroid),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorExportPlatformAndroid),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlatformAppleEmbedded",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlatformAndroid", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorExportPlatformAppleEmbedded),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorExportPlatformAppleEmbedded),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorExportPlatformAppleEmbedded),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlatformExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlatformAppleEmbedded", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorExportPlatformExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorExportPlatformExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorExportPlatformExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlatformIOS",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlatformExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorExportPlatformIOS),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorExportPlatformIOS),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorExportPlatformIOS),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlatformLinuxBSD",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlatformIOS", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorExportPlatformLinuxBSD),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorExportPlatformLinuxBSD),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorExportPlatformLinuxBSD),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlatformMacOS",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlatformLinuxBSD", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorExportPlatformMacOS),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorExportPlatformMacOS),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorExportPlatformMacOS),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlatformPC",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlatformMacOS", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorExportPlatformPC),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorExportPlatformPC),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorExportPlatformPC),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlatformVisionOS",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlatformPC", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorExportPlatformVisionOS),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorExportPlatformVisionOS),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorExportPlatformVisionOS),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlatformWeb",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlatformVisionOS", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorExportPlatformWeb),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorExportPlatformWeb),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorExportPlatformWeb),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlatformWindows",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlatformWeb", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorExportPlatformWindows),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorExportPlatformWindows),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorExportPlatformWindows),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlugin",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlatformWindows", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorExportPlugin),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorExportPlugin),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorExportPlugin),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPreset",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPlugin", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorExportPreset),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorExportPreset),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorExportPreset),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorFeatureProfile",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorExportPreset", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorFeatureProfile),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorFeatureProfile),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorFeatureProfile),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorFileDialog",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorFeatureProfile", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorFileDialog),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorFileDialog),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorFileDialog),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorFileSystem",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorFileDialog", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorFileSystem),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorFileSystem),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorFileSystem),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorFileSystemDirectory",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorFileSystem", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorFileSystemDirectory),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorFileSystemDirectory),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorFileSystemDirectory),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorFileSystemImportFormatSupportQuery",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorFileSystemDirectory", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorFileSystemImportFormatSupportQuery),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorFileSystemImportFormatSupportQuery),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorFileSystemImportFormatSupportQuery),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorImportPlugin",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorFileSystemImportFormatSupportQuery", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorImportPlugin),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorImportPlugin),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorImportPlugin),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorInspector",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorImportPlugin", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorInspector),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorInspector),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorInspector),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorInspectorPlugin",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorInspector", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorInspectorPlugin),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorInspectorPlugin),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorInspectorPlugin),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorInterface",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorInspectorPlugin", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorInterface),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorInterface),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorInterface),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorNode3DGizmo",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorInterface", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorNode3DGizmo),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorNode3DGizmo),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorNode3DGizmo),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorNode3DGizmoPlugin",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorNode3DGizmo", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorNode3DGizmoPlugin),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorNode3DGizmoPlugin),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorNode3DGizmoPlugin),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorPaths",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorNode3DGizmoPlugin", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorPaths),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorPaths),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorPaths),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorPlugin",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorPaths", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorPlugin),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorPlugin),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorPlugin),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorProperty",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorPlugin", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorProperty),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorProperty),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorProperty),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorResourceConversionPlugin",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorProperty", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorResourceConversionPlugin),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorResourceConversionPlugin),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorResourceConversionPlugin),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorResourcePicker",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorResourceConversionPlugin", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorResourcePicker),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorResourcePicker),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorResourcePicker),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorResourcePreview",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorResourcePicker", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorResourcePreview),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorResourcePreview),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorResourcePreview),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorResourcePreviewGenerator",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorResourcePreview", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorResourcePreviewGenerator),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorResourcePreviewGenerator),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorResourcePreviewGenerator),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorResourceTooltipPlugin",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorResourcePreviewGenerator", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorResourceTooltipPlugin),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorResourceTooltipPlugin),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorResourceTooltipPlugin),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorSceneFormatImporter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorResourceTooltipPlugin", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorSceneFormatImporter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorSceneFormatImporter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorSceneFormatImporter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorSceneFormatImporterBlend",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorSceneFormatImporter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorSceneFormatImporterBlend),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorSceneFormatImporterBlend),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorSceneFormatImporterBlend),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorSceneFormatImporterFBX2GLTF",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorSceneFormatImporterBlend", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorSceneFormatImporterFBX2GLTF),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorSceneFormatImporterFBX2GLTF),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorSceneFormatImporterFBX2GLTF),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorSceneFormatImporterGLTF",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorSceneFormatImporterFBX2GLTF", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorSceneFormatImporterGLTF),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorSceneFormatImporterGLTF),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorSceneFormatImporterGLTF),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorSceneFormatImporterUFBX",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorSceneFormatImporterGLTF", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorSceneFormatImporterUFBX),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorSceneFormatImporterUFBX),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorSceneFormatImporterUFBX),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorScenePostImport",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorSceneFormatImporterUFBX", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorScenePostImport),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorScenePostImport),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorScenePostImport),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorScenePostImportPlugin",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorScenePostImport", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorScenePostImportPlugin),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorScenePostImportPlugin),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorScenePostImportPlugin),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorScript",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorScenePostImportPlugin", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorScript),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorScript),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorScript),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorScriptPicker",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorScript", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorScriptPicker),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorScriptPicker),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorScriptPicker),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorSelection",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorScriptPicker", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorSelection),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorSelection),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorSelection),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorSettings",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorSelection", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorSettings),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorSettings),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorSettings),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorSpinSlider",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorSettings", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorSpinSlider),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorSpinSlider),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorSpinSlider),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorSyntaxHighlighter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorSpinSlider", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorSyntaxHighlighter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorSyntaxHighlighter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorSyntaxHighlighter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorToaster",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorSyntaxHighlighter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorToaster),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorToaster),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorToaster),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorTranslationParserPlugin",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorToaster", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorTranslationParserPlugin),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorTranslationParserPlugin),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorTranslationParserPlugin),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorUndoRedoManager",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorTranslationParserPlugin", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorUndoRedoManager),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorUndoRedoManager),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorUndoRedoManager),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorVCSInterface",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorUndoRedoManager", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EditorVCSInterface),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EditorVCSInterface),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EditorVCSInterface),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EncodedObjectAsID",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EditorVCSInterface", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EncodedObjectAsID),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EncodedObjectAsID),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EncodedObjectAsID),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Engine",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EncodedObjectAsID", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Engine),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Engine),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Engine),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EngineDebugger",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Engine", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EngineDebugger),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EngineDebugger),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EngineDebugger),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EngineProfiler",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EngineDebugger", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_EngineProfiler),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_EngineProfiler),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_EngineProfiler),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Environment",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("EngineProfiler", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Environment),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Environment),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Environment),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Expression",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Environment", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Expression),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Expression),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Expression),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ExternalTexture",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Expression", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ExternalTexture),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ExternalTexture),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ExternalTexture),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FBXDocument",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ExternalTexture", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_FBXDocument),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_FBXDocument),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_FBXDocument),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FBXState",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FBXDocument", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_FBXState),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_FBXState),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_FBXState),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FastNoiseLite",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FBXState", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_FastNoiseLite),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_FastNoiseLite),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_FastNoiseLite),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FileAccess",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FastNoiseLite", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_FileAccess),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_FileAccess),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_FileAccess),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FileDialog",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FileAccess", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_FileDialog),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_FileDialog),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_FileDialog),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FileSystemDock",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FileDialog", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_FileSystemDock),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_FileSystemDock),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_FileSystemDock),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FlowContainer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FileSystemDock", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_FlowContainer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_FlowContainer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_FlowContainer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FogMaterial",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FlowContainer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_FogMaterial),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_FogMaterial),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_FogMaterial),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FogVolume",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FogMaterial", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_FogVolume),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_FogVolume),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_FogVolume),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FoldableContainer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FogVolume", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_FoldableContainer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_FoldableContainer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_FoldableContainer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FoldableGroup",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FoldableContainer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_FoldableGroup),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_FoldableGroup),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_FoldableGroup),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Font",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FoldableGroup", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Font),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Font),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Font),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FontFile",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Font", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_FontFile),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_FontFile),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_FontFile),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FontVariation",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FontFile", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_FontVariation),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_FontVariation),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_FontVariation),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FramebufferCacheRD",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FontVariation", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_FramebufferCacheRD),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_FramebufferCacheRD),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_FramebufferCacheRD),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GDExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("FramebufferCacheRD", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GDExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GDExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GDExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GDExtensionManager",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GDExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GDExtensionManager),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GDExtensionManager),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GDExtensionManager),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GDScript",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GDExtensionManager", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GDScript),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GDScript),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GDScript),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GDScriptSyntaxHighlighter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GDScript", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GDScriptSyntaxHighlighter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GDScriptSyntaxHighlighter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GDScriptSyntaxHighlighter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFAccessor",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GDScriptSyntaxHighlighter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GLTFAccessor),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GLTFAccessor),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GLTFAccessor),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFAnimation",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFAccessor", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GLTFAnimation),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GLTFAnimation),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GLTFAnimation),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFBufferView",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFAnimation", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GLTFBufferView),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GLTFBufferView),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GLTFBufferView),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFCamera",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFBufferView", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GLTFCamera),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GLTFCamera),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GLTFCamera),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFDocument",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFCamera", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GLTFDocument),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GLTFDocument),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GLTFDocument),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFDocumentExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFDocument", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GLTFDocumentExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GLTFDocumentExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GLTFDocumentExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFDocumentExtensionConvertImporterMesh",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFDocumentExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GLTFDocumentExtensionConvertImporterMesh),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GLTFDocumentExtensionConvertImporterMesh),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GLTFDocumentExtensionConvertImporterMesh),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFLight",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFDocumentExtensionConvertImporterMesh", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GLTFLight),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GLTFLight),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GLTFLight),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFMesh",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFLight", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GLTFMesh),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GLTFMesh),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GLTFMesh),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFNode",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFMesh", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GLTFNode),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GLTFNode),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GLTFNode),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFObjectModelProperty",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFNode", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GLTFObjectModelProperty),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GLTFObjectModelProperty),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GLTFObjectModelProperty),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFPhysicsBody",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFObjectModelProperty", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GLTFPhysicsBody),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GLTFPhysicsBody),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GLTFPhysicsBody),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFPhysicsShape",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFPhysicsBody", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GLTFPhysicsShape),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GLTFPhysicsShape),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GLTFPhysicsShape),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFSkeleton",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFPhysicsShape", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GLTFSkeleton),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GLTFSkeleton),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GLTFSkeleton),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFSkin",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFSkeleton", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GLTFSkin),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GLTFSkin),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GLTFSkin),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFSpecGloss",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFSkin", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GLTFSpecGloss),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GLTFSpecGloss),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GLTFSpecGloss),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFState",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFSpecGloss", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GLTFState),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GLTFState),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GLTFState),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFTexture",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFState", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GLTFTexture),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GLTFTexture),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GLTFTexture),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFTextureSampler",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFTexture", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GLTFTextureSampler),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GLTFTextureSampler),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GLTFTextureSampler),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GPUParticles2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GLTFTextureSampler", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GPUParticles2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GPUParticles2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GPUParticles2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GPUParticles3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GPUParticles2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GPUParticles3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GPUParticles3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GPUParticles3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GPUParticlesAttractor3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GPUParticles3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GPUParticlesAttractor3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GPUParticlesAttractor3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GPUParticlesAttractor3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GPUParticlesAttractorBox3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GPUParticlesAttractor3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GPUParticlesAttractorBox3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GPUParticlesAttractorBox3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GPUParticlesAttractorBox3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GPUParticlesAttractorSphere3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GPUParticlesAttractorBox3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GPUParticlesAttractorSphere3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GPUParticlesAttractorSphere3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GPUParticlesAttractorSphere3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GPUParticlesAttractorVectorField3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GPUParticlesAttractorSphere3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GPUParticlesAttractorVectorField3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GPUParticlesAttractorVectorField3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GPUParticlesAttractorVectorField3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GPUParticlesCollision3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GPUParticlesAttractorVectorField3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GPUParticlesCollision3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GPUParticlesCollision3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GPUParticlesCollision3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GPUParticlesCollisionBox3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GPUParticlesCollision3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GPUParticlesCollisionBox3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GPUParticlesCollisionBox3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GPUParticlesCollisionBox3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GPUParticlesCollisionHeightField3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GPUParticlesCollisionBox3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GPUParticlesCollisionHeightField3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GPUParticlesCollisionHeightField3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GPUParticlesCollisionHeightField3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GPUParticlesCollisionSDF3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GPUParticlesCollisionHeightField3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GPUParticlesCollisionSDF3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GPUParticlesCollisionSDF3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GPUParticlesCollisionSDF3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GPUParticlesCollisionSphere3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GPUParticlesCollisionSDF3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GPUParticlesCollisionSphere3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GPUParticlesCollisionSphere3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GPUParticlesCollisionSphere3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Generic6DOFJoint3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GPUParticlesCollisionSphere3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Generic6DOFJoint3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Generic6DOFJoint3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Generic6DOFJoint3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Geometry2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Generic6DOFJoint3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Geometry2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Geometry2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Geometry2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Geometry3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Geometry2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Geometry3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Geometry3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Geometry3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GeometryInstance3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Geometry3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GeometryInstance3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GeometryInstance3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GeometryInstance3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Gradient",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GeometryInstance3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Gradient),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Gradient),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Gradient),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GradientTexture1D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Gradient", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GradientTexture1D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GradientTexture1D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GradientTexture1D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GradientTexture2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GradientTexture1D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GradientTexture2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GradientTexture2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GradientTexture2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GraphEdit",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GradientTexture2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GraphEdit),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GraphEdit),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GraphEdit),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GraphElement",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GraphEdit", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GraphElement),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GraphElement),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GraphElement),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GraphFrame",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GraphElement", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GraphFrame),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GraphFrame),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GraphFrame),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GraphNode",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GraphFrame", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GraphNode),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GraphNode),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GraphNode),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GridContainer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GraphNode", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GridContainer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GridContainer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GridContainer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GridMap",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GridContainer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GridMap),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GridMap),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GridMap),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GridMapEditorPlugin",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GridMap", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GridMapEditorPlugin),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GridMapEditorPlugin),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GridMapEditorPlugin),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GrooveJoint2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GridMapEditorPlugin", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_GrooveJoint2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_GrooveJoint2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_GrooveJoint2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HBoxContainer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("GrooveJoint2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_HBoxContainer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_HBoxContainer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_HBoxContainer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HFlowContainer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HBoxContainer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_HFlowContainer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_HFlowContainer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_HFlowContainer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HMACContext",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HFlowContainer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_HMACContext),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_HMACContext),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_HMACContext),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HScrollBar",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HMACContext", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_HScrollBar),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_HScrollBar),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_HScrollBar),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HSeparator",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HScrollBar", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_HSeparator),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_HSeparator),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_HSeparator),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HSlider",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HSeparator", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_HSlider),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_HSlider),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_HSlider),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HSplitContainer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HSlider", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_HSplitContainer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_HSplitContainer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_HSplitContainer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HTTPClient",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HSplitContainer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_HTTPClient),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_HTTPClient),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_HTTPClient),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HTTPRequest",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HTTPClient", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_HTTPRequest),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_HTTPRequest),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_HTTPRequest),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HashingContext",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HTTPRequest", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_HashingContext),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_HashingContext),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_HashingContext),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HeightMapShape3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HashingContext", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_HeightMapShape3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_HeightMapShape3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_HeightMapShape3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HingeJoint3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HeightMapShape3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_HingeJoint3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_HingeJoint3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_HingeJoint3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("IP",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("HingeJoint3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_IP),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_IP),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_IP),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Image",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("IP", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Image),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Image),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Image),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ImageFormatLoader",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Image", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ImageFormatLoader),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ImageFormatLoader),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ImageFormatLoader),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ImageFormatLoaderExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ImageFormatLoader", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ImageFormatLoaderExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ImageFormatLoaderExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ImageFormatLoaderExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ImageTexture",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ImageFormatLoaderExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ImageTexture),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ImageTexture),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ImageTexture),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ImageTexture3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ImageTexture", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ImageTexture3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ImageTexture3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ImageTexture3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ImageTextureLayered",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ImageTexture3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ImageTextureLayered),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ImageTextureLayered),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ImageTextureLayered),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ImmediateMesh",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ImageTextureLayered", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ImmediateMesh),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ImmediateMesh),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ImmediateMesh),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ImporterMesh",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ImmediateMesh", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ImporterMesh),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ImporterMesh),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ImporterMesh),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ImporterMeshInstance3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ImporterMesh", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ImporterMeshInstance3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ImporterMeshInstance3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ImporterMeshInstance3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Input",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ImporterMeshInstance3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Input),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Input),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Input),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEvent",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Input", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_InputEvent),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_InputEvent),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_InputEvent),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventAction",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEvent", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_InputEventAction),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_InputEventAction),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_InputEventAction),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventFromWindow",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventAction", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_InputEventFromWindow),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_InputEventFromWindow),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_InputEventFromWindow),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventGesture",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventFromWindow", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_InputEventGesture),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_InputEventGesture),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_InputEventGesture),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventJoypadButton",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventGesture", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_InputEventJoypadButton),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_InputEventJoypadButton),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_InputEventJoypadButton),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventJoypadMotion",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventJoypadButton", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_InputEventJoypadMotion),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_InputEventJoypadMotion),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_InputEventJoypadMotion),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventKey",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventJoypadMotion", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_InputEventKey),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_InputEventKey),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_InputEventKey),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventMIDI",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventKey", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_InputEventMIDI),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_InputEventMIDI),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_InputEventMIDI),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventMagnifyGesture",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventMIDI", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_InputEventMagnifyGesture),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_InputEventMagnifyGesture),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_InputEventMagnifyGesture),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventMouse",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventMagnifyGesture", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_InputEventMouse),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_InputEventMouse),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_InputEventMouse),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventMouseButton",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventMouse", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_InputEventMouseButton),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_InputEventMouseButton),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_InputEventMouseButton),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventMouseMotion",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventMouseButton", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_InputEventMouseMotion),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_InputEventMouseMotion),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_InputEventMouseMotion),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventPanGesture",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventMouseMotion", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_InputEventPanGesture),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_InputEventPanGesture),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_InputEventPanGesture),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventScreenDrag",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventPanGesture", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_InputEventScreenDrag),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_InputEventScreenDrag),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_InputEventScreenDrag),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventScreenTouch",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventScreenDrag", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_InputEventScreenTouch),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_InputEventScreenTouch),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_InputEventScreenTouch),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventShortcut",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventScreenTouch", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_InputEventShortcut),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_InputEventShortcut),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_InputEventShortcut),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventWithModifiers",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventShortcut", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_InputEventWithModifiers),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_InputEventWithModifiers),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_InputEventWithModifiers),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputMap",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputEventWithModifiers", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_InputMap),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_InputMap),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_InputMap),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InstancePlaceholder",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InputMap", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_InstancePlaceholder),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_InstancePlaceholder),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_InstancePlaceholder),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("IntervalTweener",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("InstancePlaceholder", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_IntervalTweener),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_IntervalTweener),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_IntervalTweener),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ItemList",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("IntervalTweener", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ItemList),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ItemList),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ItemList),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("JNISingleton",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ItemList", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_JNISingleton),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_JNISingleton),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_JNISingleton),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("JSON",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("JNISingleton", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_JSON),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_JSON),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_JSON),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("JSONRPC",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("JSON", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_JSONRPC),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_JSONRPC),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_JSONRPC),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("JavaClass",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("JSONRPC", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_JavaClass),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_JavaClass),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_JavaClass),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("JavaClassWrapper",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("JavaClass", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_JavaClassWrapper),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_JavaClassWrapper),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_JavaClassWrapper),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("JavaObject",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("JavaClassWrapper", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_JavaObject),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_JavaObject),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_JavaObject),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("JavaScriptBridge",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("JavaObject", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_JavaScriptBridge),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_JavaScriptBridge),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_JavaScriptBridge),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("JavaScriptObject",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("JavaScriptBridge", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_JavaScriptObject),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_JavaScriptObject),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_JavaScriptObject),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Joint2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("JavaScriptObject", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Joint2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Joint2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Joint2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Joint3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Joint2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Joint3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Joint3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Joint3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("KinematicCollision2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Joint3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_KinematicCollision2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_KinematicCollision2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_KinematicCollision2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("KinematicCollision3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("KinematicCollision2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_KinematicCollision3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_KinematicCollision3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_KinematicCollision3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Label",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("KinematicCollision3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Label),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Label),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Label),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Label3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Label", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Label3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Label3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Label3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("LabelSettings",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Label3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_LabelSettings),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_LabelSettings),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_LabelSettings),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Light2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("LabelSettings", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Light2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Light2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Light2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Light3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Light2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Light3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Light3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Light3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("LightOccluder2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Light3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_LightOccluder2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_LightOccluder2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_LightOccluder2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("LightmapGI",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("LightOccluder2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_LightmapGI),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_LightmapGI),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_LightmapGI),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("LightmapGIData",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("LightmapGI", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_LightmapGIData),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_LightmapGIData),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_LightmapGIData),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("LightmapProbe",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("LightmapGIData", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_LightmapProbe),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_LightmapProbe),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_LightmapProbe),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Lightmapper",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("LightmapProbe", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Lightmapper),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Lightmapper),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Lightmapper),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("LightmapperRD",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Lightmapper", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_LightmapperRD),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_LightmapperRD),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_LightmapperRD),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Line2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("LightmapperRD", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Line2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Line2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Line2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("LineEdit",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Line2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_LineEdit),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_LineEdit),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_LineEdit),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("LinkButton",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("LineEdit", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_LinkButton),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_LinkButton),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_LinkButton),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Logger",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("LinkButton", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Logger),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Logger),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Logger),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("LookAtModifier3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Logger", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_LookAtModifier3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_LookAtModifier3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_LookAtModifier3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MainLoop",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("LookAtModifier3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MainLoop),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MainLoop),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MainLoop),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MarginContainer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MainLoop", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MarginContainer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MarginContainer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MarginContainer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Marker2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MarginContainer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Marker2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Marker2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Marker2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Marker3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Marker2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Marker3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Marker3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Marker3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Marshalls",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Marker3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Marshalls),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Marshalls),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Marshalls),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Material",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Marshalls", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Material),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Material),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Material),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MenuBar",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Material", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MenuBar),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MenuBar),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MenuBar),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MenuButton",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MenuBar", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MenuButton),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MenuButton),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MenuButton),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Mesh",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MenuButton", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Mesh),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Mesh),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Mesh),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MeshConvexDecompositionSettings",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Mesh", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MeshConvexDecompositionSettings),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MeshConvexDecompositionSettings),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MeshConvexDecompositionSettings),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MeshDataTool",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MeshConvexDecompositionSettings", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MeshDataTool),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MeshDataTool),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MeshDataTool),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MeshInstance2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MeshDataTool", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MeshInstance2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MeshInstance2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MeshInstance2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MeshInstance3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MeshInstance2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MeshInstance3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MeshInstance3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MeshInstance3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MeshLibrary",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MeshInstance3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MeshLibrary),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MeshLibrary),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MeshLibrary),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MeshTexture",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MeshLibrary", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MeshTexture),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MeshTexture),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MeshTexture),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MethodTweener",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MeshTexture", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MethodTweener),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MethodTweener),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MethodTweener),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MissingNode",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MethodTweener", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MissingNode),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MissingNode),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MissingNode),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MissingResource",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MissingNode", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MissingResource),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MissingResource),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MissingResource),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MobileVRInterface",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MissingResource", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MobileVRInterface),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MobileVRInterface),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MobileVRInterface),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ModifierBoneTarget3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MobileVRInterface", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ModifierBoneTarget3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ModifierBoneTarget3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ModifierBoneTarget3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MovieWriter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ModifierBoneTarget3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MovieWriter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MovieWriter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MovieWriter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MultiMesh",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MovieWriter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MultiMesh),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MultiMesh),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MultiMesh),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MultiMeshInstance2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MultiMesh", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MultiMeshInstance2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MultiMeshInstance2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MultiMeshInstance2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MultiMeshInstance3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MultiMeshInstance2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MultiMeshInstance3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MultiMeshInstance3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MultiMeshInstance3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MultiplayerAPI",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MultiMeshInstance3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MultiplayerAPI),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MultiplayerAPI),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MultiplayerAPI),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MultiplayerAPIExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MultiplayerAPI", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MultiplayerAPIExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MultiplayerAPIExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MultiplayerAPIExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MultiplayerPeer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MultiplayerAPIExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MultiplayerPeer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MultiplayerPeer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MultiplayerPeer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MultiplayerPeerExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MultiplayerPeer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MultiplayerPeerExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MultiplayerPeerExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MultiplayerPeerExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MultiplayerSpawner",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MultiplayerPeerExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MultiplayerSpawner),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MultiplayerSpawner),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MultiplayerSpawner),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MultiplayerSynchronizer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MultiplayerSpawner", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_MultiplayerSynchronizer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_MultiplayerSynchronizer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_MultiplayerSynchronizer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Mutex",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("MultiplayerSynchronizer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Mutex),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Mutex),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Mutex),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NativeMenu",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Mutex", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_NativeMenu),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_NativeMenu),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_NativeMenu),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationAgent2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NativeMenu", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_NavigationAgent2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_NavigationAgent2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_NavigationAgent2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationAgent3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationAgent2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_NavigationAgent3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_NavigationAgent3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_NavigationAgent3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationLink2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationAgent3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_NavigationLink2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_NavigationLink2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_NavigationLink2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationLink3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationLink2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_NavigationLink3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_NavigationLink3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_NavigationLink3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationMesh",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationLink3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_NavigationMesh),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_NavigationMesh),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_NavigationMesh),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationMeshGenerator",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationMesh", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_NavigationMeshGenerator),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_NavigationMeshGenerator),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_NavigationMeshGenerator),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationMeshSourceGeometryData2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationMeshGenerator", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_NavigationMeshSourceGeometryData2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_NavigationMeshSourceGeometryData2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_NavigationMeshSourceGeometryData2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationMeshSourceGeometryData3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationMeshSourceGeometryData2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_NavigationMeshSourceGeometryData3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_NavigationMeshSourceGeometryData3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_NavigationMeshSourceGeometryData3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationObstacle2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationMeshSourceGeometryData3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_NavigationObstacle2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_NavigationObstacle2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_NavigationObstacle2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationObstacle3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationObstacle2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_NavigationObstacle3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_NavigationObstacle3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_NavigationObstacle3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationPathQueryParameters2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationObstacle3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_NavigationPathQueryParameters2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_NavigationPathQueryParameters2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_NavigationPathQueryParameters2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationPathQueryParameters3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationPathQueryParameters2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_NavigationPathQueryParameters3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_NavigationPathQueryParameters3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_NavigationPathQueryParameters3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationPathQueryResult2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationPathQueryParameters3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_NavigationPathQueryResult2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_NavigationPathQueryResult2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_NavigationPathQueryResult2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationPathQueryResult3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationPathQueryResult2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_NavigationPathQueryResult3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_NavigationPathQueryResult3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_NavigationPathQueryResult3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationPolygon",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationPathQueryResult3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_NavigationPolygon),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_NavigationPolygon),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_NavigationPolygon),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationRegion2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationPolygon", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_NavigationRegion2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_NavigationRegion2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_NavigationRegion2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationRegion3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationRegion2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_NavigationRegion3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_NavigationRegion3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_NavigationRegion3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationServer2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationRegion3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_NavigationServer2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_NavigationServer2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_NavigationServer2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationServer3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationServer2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_NavigationServer3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_NavigationServer3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_NavigationServer3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NinePatchRect",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NavigationServer3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_NinePatchRect),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_NinePatchRect),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_NinePatchRect),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Node",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NinePatchRect", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Node),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Node),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Node),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Node2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Node", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Node2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Node2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Node2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Node3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Node2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Node3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Node3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Node3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Node3DGizmo",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Node3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Node3DGizmo),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Node3DGizmo),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Node3DGizmo),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Noise",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Node3DGizmo", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Noise),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Noise),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Noise),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NoiseTexture2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Noise", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_NoiseTexture2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_NoiseTexture2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_NoiseTexture2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NoiseTexture3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NoiseTexture2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_NoiseTexture3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_NoiseTexture3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_NoiseTexture3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ORMMaterial3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("NoiseTexture3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ORMMaterial3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ORMMaterial3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ORMMaterial3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OS",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ORMMaterial3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OS),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OS),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OS),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Object",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OS", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Object),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Object),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Object),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Occluder3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Object", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Occluder3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Occluder3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Occluder3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OccluderInstance3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Occluder3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OccluderInstance3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OccluderInstance3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OccluderInstance3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OccluderPolygon2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OccluderInstance3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OccluderPolygon2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OccluderPolygon2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OccluderPolygon2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OfflineMultiplayerPeer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OccluderPolygon2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OfflineMultiplayerPeer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OfflineMultiplayerPeer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OfflineMultiplayerPeer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OggPacketSequence",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OfflineMultiplayerPeer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OggPacketSequence),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OggPacketSequence),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OggPacketSequence),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OggPacketSequencePlayback",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OggPacketSequence", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OggPacketSequencePlayback),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OggPacketSequencePlayback),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OggPacketSequencePlayback),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OmniLight3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OggPacketSequencePlayback", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OmniLight3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OmniLight3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OmniLight3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRAPIExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OmniLight3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRAPIExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRAPIExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRAPIExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRAction",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRAPIExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRAction),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRAction),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRAction),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRActionBindingModifier",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRAction", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRActionBindingModifier),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRActionBindingModifier),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRActionBindingModifier),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRActionMap",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRActionBindingModifier", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRActionMap),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRActionMap),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRActionMap),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRActionSet",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRActionMap", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRActionSet),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRActionSet),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRActionSet),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRAnalogThresholdModifier",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRActionSet", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRAnalogThresholdModifier),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRAnalogThresholdModifier),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRAnalogThresholdModifier),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRBindingModifier",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRAnalogThresholdModifier", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRBindingModifier),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRBindingModifier),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRBindingModifier),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRBindingModifierEditor",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRBindingModifier", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRBindingModifierEditor),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRBindingModifierEditor),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRBindingModifierEditor),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRCompositionLayer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRBindingModifierEditor", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRCompositionLayer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRCompositionLayer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRCompositionLayer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRCompositionLayerCylinder",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRCompositionLayer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRCompositionLayerCylinder),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRCompositionLayerCylinder),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRCompositionLayerCylinder),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRCompositionLayerEquirect",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRCompositionLayerCylinder", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRCompositionLayerEquirect),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRCompositionLayerEquirect),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRCompositionLayerEquirect),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRCompositionLayerQuad",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRCompositionLayerEquirect", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRCompositionLayerQuad),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRCompositionLayerQuad),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRCompositionLayerQuad),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRDpadBindingModifier",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRCompositionLayerQuad", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRDpadBindingModifier),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRDpadBindingModifier),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRDpadBindingModifier),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRExtensionWrapper",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRDpadBindingModifier", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRExtensionWrapper),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRExtensionWrapper),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRExtensionWrapper),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRExtensionWrapperExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRExtensionWrapper", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRExtensionWrapperExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRExtensionWrapperExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRExtensionWrapperExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRFutureExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRExtensionWrapperExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRFutureExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRFutureExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRFutureExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRFutureResult",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRFutureExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRFutureResult),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRFutureResult),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRFutureResult),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRHand",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRFutureResult", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRHand),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRHand),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRHand),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRHapticBase",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRHand", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRHapticBase),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRHapticBase),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRHapticBase),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRHapticVibration",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRHapticBase", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRHapticVibration),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRHapticVibration),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRHapticVibration),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRIPBinding",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRHapticVibration", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRIPBinding),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRIPBinding),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRIPBinding),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRIPBindingModifier",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRIPBinding", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRIPBindingModifier),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRIPBindingModifier),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRIPBindingModifier),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRInteractionProfile",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRIPBindingModifier", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRInteractionProfile),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRInteractionProfile),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRInteractionProfile),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRInteractionProfileEditor",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRInteractionProfile", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRInteractionProfileEditor),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRInteractionProfileEditor),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRInteractionProfileEditor),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRInteractionProfileEditorBase",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRInteractionProfileEditor", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRInteractionProfileEditorBase),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRInteractionProfileEditorBase),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRInteractionProfileEditorBase),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRInteractionProfileMetadata",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRInteractionProfileEditorBase", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRInteractionProfileMetadata),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRInteractionProfileMetadata),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRInteractionProfileMetadata),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRInterface",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRInteractionProfileMetadata", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRInterface),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRInterface),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRInterface),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRRenderModel",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRInterface", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRRenderModel),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRRenderModel),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRRenderModel),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRRenderModelExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRRenderModel", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRRenderModelExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRRenderModelExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRRenderModelExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRRenderModelManager",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRRenderModelExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRRenderModelManager),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRRenderModelManager),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRRenderModelManager),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRVisibilityMask",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRRenderModelManager", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OpenXRVisibilityMask),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OpenXRVisibilityMask),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OpenXRVisibilityMask),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OptimizedTranslation",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OpenXRVisibilityMask", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OptimizedTranslation),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OptimizedTranslation),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OptimizedTranslation),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OptionButton",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OptimizedTranslation", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_OptionButton),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_OptionButton),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_OptionButton),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PCKPacker",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("OptionButton", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PCKPacker),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PCKPacker),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PCKPacker),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PackedDataContainer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PCKPacker", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PackedDataContainer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PackedDataContainer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PackedDataContainer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PackedDataContainerRef",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PackedDataContainer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PackedDataContainerRef),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PackedDataContainerRef),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PackedDataContainerRef),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PackedScene",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PackedDataContainerRef", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PackedScene),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PackedScene),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PackedScene),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PacketPeer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PackedScene", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PacketPeer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PacketPeer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PacketPeer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PacketPeerDTLS",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PacketPeer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PacketPeerDTLS),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PacketPeerDTLS),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PacketPeerDTLS),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PacketPeerExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PacketPeerDTLS", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PacketPeerExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PacketPeerExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PacketPeerExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PacketPeerStream",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PacketPeerExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PacketPeerStream),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PacketPeerStream),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PacketPeerStream),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PacketPeerUDP",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PacketPeerStream", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PacketPeerUDP),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PacketPeerUDP),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PacketPeerUDP),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Panel",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PacketPeerUDP", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Panel),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Panel),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Panel),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PanelContainer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Panel", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PanelContainer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PanelContainer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PanelContainer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PanoramaSkyMaterial",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PanelContainer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PanoramaSkyMaterial),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PanoramaSkyMaterial),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PanoramaSkyMaterial),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Parallax2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PanoramaSkyMaterial", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Parallax2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Parallax2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Parallax2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ParallaxBackground",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Parallax2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ParallaxBackground),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ParallaxBackground),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ParallaxBackground),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ParallaxLayer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ParallaxBackground", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ParallaxLayer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ParallaxLayer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ParallaxLayer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ParticleProcessMaterial",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ParallaxLayer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ParticleProcessMaterial),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ParticleProcessMaterial),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ParticleProcessMaterial),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Path2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ParticleProcessMaterial", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Path2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Path2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Path2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Path3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Path2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Path3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Path3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Path3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PathFollow2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Path3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PathFollow2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PathFollow2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PathFollow2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PathFollow3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PathFollow2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PathFollow3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PathFollow3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PathFollow3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Performance",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PathFollow3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Performance),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Performance),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Performance),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicalBone2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Performance", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicalBone2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicalBone2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicalBone2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicalBone3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicalBone2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicalBone3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicalBone3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicalBone3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicalBoneSimulator3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicalBone3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicalBoneSimulator3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicalBoneSimulator3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicalBoneSimulator3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicalSkyMaterial",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicalBoneSimulator3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicalSkyMaterial),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicalSkyMaterial),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicalSkyMaterial),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsBody2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicalSkyMaterial", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsBody2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsBody2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsBody2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsBody3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsBody2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsBody3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsBody3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsBody3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsDirectBodyState2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsBody3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsDirectBodyState2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsDirectBodyState2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsDirectBodyState2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsDirectBodyState2DExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsDirectBodyState2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsDirectBodyState2DExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsDirectBodyState2DExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsDirectBodyState2DExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsDirectBodyState3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsDirectBodyState2DExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsDirectBodyState3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsDirectBodyState3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsDirectBodyState3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsDirectBodyState3DExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsDirectBodyState3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsDirectBodyState3DExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsDirectBodyState3DExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsDirectBodyState3DExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsDirectSpaceState2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsDirectBodyState3DExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsDirectSpaceState2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsDirectSpaceState2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsDirectSpaceState2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsDirectSpaceState2DExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsDirectSpaceState2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsDirectSpaceState2DExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsDirectSpaceState2DExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsDirectSpaceState2DExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsDirectSpaceState3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsDirectSpaceState2DExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsDirectSpaceState3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsDirectSpaceState3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsDirectSpaceState3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsDirectSpaceState3DExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsDirectSpaceState3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsDirectSpaceState3DExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsDirectSpaceState3DExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsDirectSpaceState3DExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsMaterial",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsDirectSpaceState3DExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsMaterial),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsMaterial),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsMaterial),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsPointQueryParameters2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsMaterial", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsPointQueryParameters2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsPointQueryParameters2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsPointQueryParameters2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsPointQueryParameters3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsPointQueryParameters2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsPointQueryParameters3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsPointQueryParameters3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsPointQueryParameters3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsRayQueryParameters2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsPointQueryParameters3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsRayQueryParameters2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsRayQueryParameters2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsRayQueryParameters2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsRayQueryParameters3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsRayQueryParameters2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsRayQueryParameters3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsRayQueryParameters3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsRayQueryParameters3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsServer2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsRayQueryParameters3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsServer2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsServer2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsServer2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsServer2DExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsServer2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsServer2DExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsServer2DExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsServer2DExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsServer2DManager",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsServer2DExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsServer2DManager),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsServer2DManager),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsServer2DManager),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsServer3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsServer2DManager", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsServer3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsServer3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsServer3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsServer3DExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsServer3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsServer3DExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsServer3DExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsServer3DExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsServer3DManager",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsServer3DExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsServer3DManager),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsServer3DManager),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsServer3DManager),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsServer3DRenderingServerHandler",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsServer3DManager", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsServer3DRenderingServerHandler),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsServer3DRenderingServerHandler),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsServer3DRenderingServerHandler),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsShapeQueryParameters2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsServer3DRenderingServerHandler", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsShapeQueryParameters2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsShapeQueryParameters2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsShapeQueryParameters2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsShapeQueryParameters3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsShapeQueryParameters2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsShapeQueryParameters3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsShapeQueryParameters3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsShapeQueryParameters3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsTestMotionParameters2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsShapeQueryParameters3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsTestMotionParameters2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsTestMotionParameters2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsTestMotionParameters2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsTestMotionParameters3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsTestMotionParameters2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsTestMotionParameters3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsTestMotionParameters3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsTestMotionParameters3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsTestMotionResult2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsTestMotionParameters3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsTestMotionResult2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsTestMotionResult2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsTestMotionResult2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsTestMotionResult3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsTestMotionResult2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PhysicsTestMotionResult3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PhysicsTestMotionResult3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PhysicsTestMotionResult3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PinJoint2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PhysicsTestMotionResult3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PinJoint2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PinJoint2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PinJoint2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PinJoint3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PinJoint2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PinJoint3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PinJoint3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PinJoint3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PlaceholderCubemap",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PinJoint3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PlaceholderCubemap),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PlaceholderCubemap),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PlaceholderCubemap),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PlaceholderCubemapArray",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PlaceholderCubemap", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PlaceholderCubemapArray),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PlaceholderCubemapArray),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PlaceholderCubemapArray),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PlaceholderMaterial",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PlaceholderCubemapArray", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PlaceholderMaterial),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PlaceholderMaterial),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PlaceholderMaterial),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PlaceholderMesh",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PlaceholderMaterial", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PlaceholderMesh),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PlaceholderMesh),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PlaceholderMesh),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PlaceholderTexture2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PlaceholderMesh", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PlaceholderTexture2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PlaceholderTexture2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PlaceholderTexture2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PlaceholderTexture2DArray",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PlaceholderTexture2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PlaceholderTexture2DArray),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PlaceholderTexture2DArray),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PlaceholderTexture2DArray),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PlaceholderTexture3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PlaceholderTexture2DArray", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PlaceholderTexture3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PlaceholderTexture3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PlaceholderTexture3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PlaceholderTextureLayered",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PlaceholderTexture3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PlaceholderTextureLayered),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PlaceholderTextureLayered),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PlaceholderTextureLayered),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PlaneMesh",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PlaceholderTextureLayered", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PlaneMesh),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PlaneMesh),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PlaneMesh),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PointLight2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PlaneMesh", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PointLight2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PointLight2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PointLight2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PointMesh",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PointLight2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PointMesh),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PointMesh),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PointMesh),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Polygon2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PointMesh", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Polygon2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Polygon2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Polygon2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PolygonOccluder3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Polygon2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PolygonOccluder3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PolygonOccluder3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PolygonOccluder3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PolygonPathFinder",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PolygonOccluder3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PolygonPathFinder),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PolygonPathFinder),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PolygonPathFinder),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Popup",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PolygonPathFinder", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Popup),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Popup),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Popup),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PopupMenu",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Popup", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PopupMenu),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PopupMenu),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PopupMenu),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PopupPanel",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PopupMenu", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PopupPanel),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PopupPanel),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PopupPanel),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PortableCompressedTexture2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PopupPanel", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PortableCompressedTexture2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PortableCompressedTexture2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PortableCompressedTexture2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PrimitiveMesh",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PortableCompressedTexture2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PrimitiveMesh),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PrimitiveMesh),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PrimitiveMesh),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PrismMesh",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PrimitiveMesh", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PrismMesh),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PrismMesh),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PrismMesh),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ProceduralSkyMaterial",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PrismMesh", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ProceduralSkyMaterial),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ProceduralSkyMaterial),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ProceduralSkyMaterial),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ProgressBar",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ProceduralSkyMaterial", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ProgressBar),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ProgressBar),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ProgressBar),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ProjectSettings",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ProgressBar", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ProjectSettings),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ProjectSettings),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ProjectSettings),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PropertyTweener",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ProjectSettings", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_PropertyTweener),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_PropertyTweener),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_PropertyTweener),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("QuadMesh",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("PropertyTweener", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_QuadMesh),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_QuadMesh),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_QuadMesh),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("QuadOccluder3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("QuadMesh", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_QuadOccluder3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_QuadOccluder3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_QuadOccluder3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDAttachmentFormat",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("QuadOccluder3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RDAttachmentFormat),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RDAttachmentFormat),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RDAttachmentFormat),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDFramebufferPass",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDAttachmentFormat", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RDFramebufferPass),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RDFramebufferPass),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RDFramebufferPass),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDPipelineColorBlendState",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDFramebufferPass", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RDPipelineColorBlendState),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RDPipelineColorBlendState),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RDPipelineColorBlendState),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDPipelineColorBlendStateAttachment",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDPipelineColorBlendState", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RDPipelineColorBlendStateAttachment),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RDPipelineColorBlendStateAttachment),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RDPipelineColorBlendStateAttachment),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDPipelineDepthStencilState",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDPipelineColorBlendStateAttachment", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RDPipelineDepthStencilState),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RDPipelineDepthStencilState),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RDPipelineDepthStencilState),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDPipelineMultisampleState",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDPipelineDepthStencilState", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RDPipelineMultisampleState),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RDPipelineMultisampleState),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RDPipelineMultisampleState),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDPipelineRasterizationState",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDPipelineMultisampleState", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RDPipelineRasterizationState),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RDPipelineRasterizationState),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RDPipelineRasterizationState),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDPipelineSpecializationConstant",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDPipelineRasterizationState", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RDPipelineSpecializationConstant),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RDPipelineSpecializationConstant),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RDPipelineSpecializationConstant),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDSamplerState",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDPipelineSpecializationConstant", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RDSamplerState),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RDSamplerState),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RDSamplerState),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDShaderFile",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDSamplerState", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RDShaderFile),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RDShaderFile),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RDShaderFile),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDShaderSPIRV",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDShaderFile", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RDShaderSPIRV),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RDShaderSPIRV),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RDShaderSPIRV),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDShaderSource",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDShaderSPIRV", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RDShaderSource),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RDShaderSource),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RDShaderSource),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDTextureFormat",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDShaderSource", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RDTextureFormat),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RDTextureFormat),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RDTextureFormat),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDTextureView",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDTextureFormat", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RDTextureView),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RDTextureView),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RDTextureView),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDUniform",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDTextureView", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RDUniform),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RDUniform),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RDUniform),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDVertexAttribute",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDUniform", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RDVertexAttribute),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RDVertexAttribute),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RDVertexAttribute),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RandomNumberGenerator",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RDVertexAttribute", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RandomNumberGenerator),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RandomNumberGenerator),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RandomNumberGenerator),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Range",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RandomNumberGenerator", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Range),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Range),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Range),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RayCast2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Range", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RayCast2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RayCast2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RayCast2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RayCast3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RayCast2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RayCast3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RayCast3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RayCast3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RectangleShape2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RayCast3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RectangleShape2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RectangleShape2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RectangleShape2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RefCounted",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RectangleShape2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RefCounted),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RefCounted),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RefCounted),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ReferenceRect",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RefCounted", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ReferenceRect),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ReferenceRect),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ReferenceRect),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ReflectionProbe",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ReferenceRect", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ReflectionProbe),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ReflectionProbe),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ReflectionProbe),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RegEx",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ReflectionProbe", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RegEx),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RegEx),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RegEx),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RegExMatch",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RegEx", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RegExMatch),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RegExMatch),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RegExMatch),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RemoteTransform2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RegExMatch", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RemoteTransform2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RemoteTransform2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RemoteTransform2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RemoteTransform3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RemoteTransform2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RemoteTransform3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RemoteTransform3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RemoteTransform3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderData",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RemoteTransform3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RenderData),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RenderData),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RenderData),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderDataExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderData", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RenderDataExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RenderDataExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RenderDataExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderDataRD",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderDataExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RenderDataRD),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RenderDataRD),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RenderDataRD),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderSceneBuffers",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderDataRD", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RenderSceneBuffers),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RenderSceneBuffers),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RenderSceneBuffers),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderSceneBuffersConfiguration",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderSceneBuffers", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RenderSceneBuffersConfiguration),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RenderSceneBuffersConfiguration),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RenderSceneBuffersConfiguration),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderSceneBuffersExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderSceneBuffersConfiguration", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RenderSceneBuffersExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RenderSceneBuffersExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RenderSceneBuffersExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderSceneBuffersRD",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderSceneBuffersExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RenderSceneBuffersRD),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RenderSceneBuffersRD),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RenderSceneBuffersRD),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderSceneData",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderSceneBuffersRD", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RenderSceneData),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RenderSceneData),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RenderSceneData),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderSceneDataExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderSceneData", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RenderSceneDataExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RenderSceneDataExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RenderSceneDataExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderSceneDataRD",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderSceneDataExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RenderSceneDataRD),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RenderSceneDataRD),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RenderSceneDataRD),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderingDevice",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderSceneDataRD", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RenderingDevice),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RenderingDevice),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RenderingDevice),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderingServer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderingDevice", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RenderingServer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RenderingServer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RenderingServer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Resource",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RenderingServer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Resource),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Resource),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Resource),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceFormatLoader",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Resource", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ResourceFormatLoader),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ResourceFormatLoader),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ResourceFormatLoader),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceFormatSaver",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceFormatLoader", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ResourceFormatSaver),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ResourceFormatSaver),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ResourceFormatSaver),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceFormatSaver", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ResourceImporter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ResourceImporter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ResourceImporter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterBMFont",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ResourceImporterBMFont),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ResourceImporterBMFont),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ResourceImporterBMFont),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterBitMap",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterBMFont", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ResourceImporterBitMap),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ResourceImporterBitMap),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ResourceImporterBitMap),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterCSVTranslation",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterBitMap", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ResourceImporterCSVTranslation),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ResourceImporterCSVTranslation),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ResourceImporterCSVTranslation),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterDynamicFont",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterCSVTranslation", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ResourceImporterDynamicFont),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ResourceImporterDynamicFont),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ResourceImporterDynamicFont),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterImage",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterDynamicFont", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ResourceImporterImage),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ResourceImporterImage),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ResourceImporterImage),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterImageFont",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterImage", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ResourceImporterImageFont),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ResourceImporterImageFont),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ResourceImporterImageFont),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterLayeredTexture",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterImageFont", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ResourceImporterLayeredTexture),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ResourceImporterLayeredTexture),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ResourceImporterLayeredTexture),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterMP3",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterLayeredTexture", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ResourceImporterMP3),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ResourceImporterMP3),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ResourceImporterMP3),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterOBJ",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterMP3", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ResourceImporterOBJ),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ResourceImporterOBJ),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ResourceImporterOBJ),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterOggVorbis",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterOBJ", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ResourceImporterOggVorbis),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ResourceImporterOggVorbis),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ResourceImporterOggVorbis),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterSVG",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterOggVorbis", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ResourceImporterSVG),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ResourceImporterSVG),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ResourceImporterSVG),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterScene",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterSVG", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ResourceImporterScene),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ResourceImporterScene),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ResourceImporterScene),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterShaderFile",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterScene", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ResourceImporterShaderFile),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ResourceImporterShaderFile),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ResourceImporterShaderFile),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterTexture",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterShaderFile", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ResourceImporterTexture),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ResourceImporterTexture),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ResourceImporterTexture),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterTextureAtlas",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterTexture", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ResourceImporterTextureAtlas),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ResourceImporterTextureAtlas),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ResourceImporterTextureAtlas),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterWAV",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterTextureAtlas", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ResourceImporterWAV),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ResourceImporterWAV),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ResourceImporterWAV),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceLoader",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceImporterWAV", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ResourceLoader),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ResourceLoader),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ResourceLoader),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourcePreloader",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceLoader", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ResourcePreloader),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ResourcePreloader),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ResourcePreloader),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceSaver",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourcePreloader", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ResourceSaver),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ResourceSaver),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ResourceSaver),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceUID",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceSaver", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ResourceUID),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ResourceUID),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ResourceUID),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RetargetModifier3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ResourceUID", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RetargetModifier3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RetargetModifier3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RetargetModifier3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RibbonTrailMesh",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RetargetModifier3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RibbonTrailMesh),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RibbonTrailMesh),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RibbonTrailMesh),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RichTextEffect",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RibbonTrailMesh", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RichTextEffect),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RichTextEffect),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RichTextEffect),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RichTextLabel",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RichTextEffect", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RichTextLabel),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RichTextLabel),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RichTextLabel),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RigidBody2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RichTextLabel", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RigidBody2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RigidBody2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RigidBody2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RigidBody3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RigidBody2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RigidBody3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RigidBody3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RigidBody3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RootMotionView",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RigidBody3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_RootMotionView),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_RootMotionView),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_RootMotionView),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SceneMultiplayer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("RootMotionView", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SceneMultiplayer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SceneMultiplayer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SceneMultiplayer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SceneReplicationConfig",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SceneMultiplayer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SceneReplicationConfig),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SceneReplicationConfig),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SceneReplicationConfig),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SceneState",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SceneReplicationConfig", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SceneState),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SceneState),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SceneState),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SceneTree",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SceneState", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SceneTree),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SceneTree),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SceneTree),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SceneTreeTimer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SceneTree", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SceneTreeTimer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SceneTreeTimer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SceneTreeTimer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Script",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SceneTreeTimer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Script),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Script),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Script),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ScriptBacktrace",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Script", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ScriptBacktrace),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ScriptBacktrace),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ScriptBacktrace),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ScriptCreateDialog",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ScriptBacktrace", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ScriptCreateDialog),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ScriptCreateDialog),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ScriptCreateDialog),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ScriptEditor",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ScriptCreateDialog", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ScriptEditor),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ScriptEditor),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ScriptEditor),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ScriptEditorBase",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ScriptEditor", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ScriptEditorBase),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ScriptEditorBase),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ScriptEditorBase),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ScriptExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ScriptEditorBase", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ScriptExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ScriptExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ScriptExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ScriptLanguage",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ScriptExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ScriptLanguage),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ScriptLanguage),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ScriptLanguage),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ScriptLanguageExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ScriptLanguage", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ScriptLanguageExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ScriptLanguageExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ScriptLanguageExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ScrollBar",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ScriptLanguageExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ScrollBar),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ScrollBar),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ScrollBar),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ScrollContainer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ScrollBar", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ScrollContainer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ScrollContainer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ScrollContainer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SegmentShape2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ScrollContainer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SegmentShape2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SegmentShape2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SegmentShape2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Semaphore",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SegmentShape2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Semaphore),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Semaphore),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Semaphore),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SeparationRayShape2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Semaphore", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SeparationRayShape2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SeparationRayShape2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SeparationRayShape2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SeparationRayShape3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SeparationRayShape2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SeparationRayShape3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SeparationRayShape3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SeparationRayShape3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Separator",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SeparationRayShape3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Separator),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Separator),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Separator),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Shader",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Separator", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Shader),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Shader),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Shader),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ShaderGlobalsOverride",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Shader", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ShaderGlobalsOverride),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ShaderGlobalsOverride),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ShaderGlobalsOverride),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ShaderInclude",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ShaderGlobalsOverride", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ShaderInclude),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ShaderInclude),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ShaderInclude),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ShaderIncludeDB",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ShaderInclude", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ShaderIncludeDB),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ShaderIncludeDB),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ShaderIncludeDB),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ShaderMaterial",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ShaderIncludeDB", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ShaderMaterial),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ShaderMaterial),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ShaderMaterial),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Shape2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ShaderMaterial", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Shape2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Shape2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Shape2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Shape3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Shape2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Shape3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Shape3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Shape3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ShapeCast2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Shape3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ShapeCast2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ShapeCast2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ShapeCast2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ShapeCast3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ShapeCast2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ShapeCast3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ShapeCast3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ShapeCast3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Shortcut",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ShapeCast3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Shortcut),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Shortcut),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Shortcut),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Skeleton2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Shortcut", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Skeleton2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Skeleton2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Skeleton2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Skeleton3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Skeleton2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Skeleton3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Skeleton3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Skeleton3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonIK3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Skeleton3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SkeletonIK3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SkeletonIK3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SkeletonIK3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonModification2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonIK3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SkeletonModification2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SkeletonModification2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SkeletonModification2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonModification2DCCDIK",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonModification2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SkeletonModification2DCCDIK),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SkeletonModification2DCCDIK),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SkeletonModification2DCCDIK),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonModification2DFABRIK",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonModification2DCCDIK", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SkeletonModification2DFABRIK),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SkeletonModification2DFABRIK),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SkeletonModification2DFABRIK),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonModification2DJiggle",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonModification2DFABRIK", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SkeletonModification2DJiggle),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SkeletonModification2DJiggle),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SkeletonModification2DJiggle),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonModification2DLookAt",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonModification2DJiggle", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SkeletonModification2DLookAt),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SkeletonModification2DLookAt),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SkeletonModification2DLookAt),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonModification2DPhysicalBones",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonModification2DLookAt", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SkeletonModification2DPhysicalBones),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SkeletonModification2DPhysicalBones),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SkeletonModification2DPhysicalBones),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonModification2DStackHolder",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonModification2DPhysicalBones", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SkeletonModification2DStackHolder),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SkeletonModification2DStackHolder),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SkeletonModification2DStackHolder),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonModification2DTwoBoneIK",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonModification2DStackHolder", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SkeletonModification2DTwoBoneIK),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SkeletonModification2DTwoBoneIK),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SkeletonModification2DTwoBoneIK),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonModificationStack2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonModification2DTwoBoneIK", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SkeletonModificationStack2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SkeletonModificationStack2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SkeletonModificationStack2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonModifier3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonModificationStack2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SkeletonModifier3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SkeletonModifier3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SkeletonModifier3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonProfile",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonModifier3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SkeletonProfile),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SkeletonProfile),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SkeletonProfile),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonProfileHumanoid",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonProfile", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SkeletonProfileHumanoid),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SkeletonProfileHumanoid),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SkeletonProfileHumanoid),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Skin",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkeletonProfileHumanoid", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Skin),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Skin),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Skin),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkinReference",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Skin", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SkinReference),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SkinReference),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SkinReference),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Sky",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SkinReference", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Sky),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Sky),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Sky),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Slider",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Sky", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Slider),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Slider),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Slider),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SliderJoint3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Slider", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SliderJoint3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SliderJoint3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SliderJoint3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SoftBody3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SliderJoint3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SoftBody3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SoftBody3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SoftBody3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SphereMesh",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SoftBody3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SphereMesh),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SphereMesh),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SphereMesh),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SphereOccluder3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SphereMesh", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SphereOccluder3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SphereOccluder3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SphereOccluder3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SphereShape3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SphereOccluder3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SphereShape3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SphereShape3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SphereShape3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SpinBox",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SphereShape3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SpinBox),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SpinBox),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SpinBox),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SplitContainer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SpinBox", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SplitContainer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SplitContainer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SplitContainer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SpotLight3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SplitContainer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SpotLight3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SpotLight3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SpotLight3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SpringArm3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SpotLight3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SpringArm3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SpringArm3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SpringArm3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SpringBoneCollision3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SpringArm3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SpringBoneCollision3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SpringBoneCollision3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SpringBoneCollision3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SpringBoneCollisionCapsule3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SpringBoneCollision3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SpringBoneCollisionCapsule3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SpringBoneCollisionCapsule3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SpringBoneCollisionCapsule3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SpringBoneCollisionPlane3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SpringBoneCollisionCapsule3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SpringBoneCollisionPlane3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SpringBoneCollisionPlane3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SpringBoneCollisionPlane3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SpringBoneCollisionSphere3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SpringBoneCollisionPlane3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SpringBoneCollisionSphere3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SpringBoneCollisionSphere3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SpringBoneCollisionSphere3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SpringBoneSimulator3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SpringBoneCollisionSphere3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SpringBoneSimulator3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SpringBoneSimulator3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SpringBoneSimulator3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Sprite2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SpringBoneSimulator3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Sprite2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Sprite2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Sprite2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Sprite3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Sprite2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Sprite3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Sprite3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Sprite3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SpriteBase3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Sprite3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SpriteBase3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SpriteBase3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SpriteBase3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SpriteFrames",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SpriteBase3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SpriteFrames),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SpriteFrames),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SpriteFrames),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StandardMaterial3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SpriteFrames", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_StandardMaterial3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_StandardMaterial3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_StandardMaterial3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StaticBody2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StandardMaterial3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_StaticBody2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_StaticBody2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_StaticBody2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StaticBody3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StaticBody2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_StaticBody3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_StaticBody3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_StaticBody3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StatusIndicator",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StaticBody3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_StatusIndicator),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_StatusIndicator),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_StatusIndicator),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StreamPeer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StatusIndicator", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_StreamPeer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_StreamPeer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_StreamPeer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StreamPeerBuffer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StreamPeer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_StreamPeerBuffer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_StreamPeerBuffer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_StreamPeerBuffer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StreamPeerExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StreamPeerBuffer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_StreamPeerExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_StreamPeerExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_StreamPeerExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StreamPeerGZIP",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StreamPeerExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_StreamPeerGZIP),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_StreamPeerGZIP),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_StreamPeerGZIP),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StreamPeerTCP",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StreamPeerGZIP", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_StreamPeerTCP),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_StreamPeerTCP),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_StreamPeerTCP),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StreamPeerTLS",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StreamPeerTCP", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_StreamPeerTLS),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_StreamPeerTLS),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_StreamPeerTLS),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StyleBox",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StreamPeerTLS", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_StyleBox),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_StyleBox),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_StyleBox),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StyleBoxEmpty",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StyleBox", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_StyleBoxEmpty),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_StyleBoxEmpty),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_StyleBoxEmpty),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StyleBoxFlat",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StyleBoxEmpty", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_StyleBoxFlat),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_StyleBoxFlat),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_StyleBoxFlat),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StyleBoxLine",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StyleBoxFlat", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_StyleBoxLine),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_StyleBoxLine),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_StyleBoxLine),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StyleBoxTexture",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StyleBoxLine", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_StyleBoxTexture),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_StyleBoxTexture),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_StyleBoxTexture),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SubViewport",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("StyleBoxTexture", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SubViewport),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SubViewport),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SubViewport),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SubViewportContainer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SubViewport", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SubViewportContainer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SubViewportContainer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SubViewportContainer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SubtweenTweener",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SubViewportContainer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SubtweenTweener),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SubtweenTweener),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SubtweenTweener),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SurfaceTool",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SubtweenTweener", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SurfaceTool),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SurfaceTool),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SurfaceTool),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SyntaxHighlighter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SurfaceTool", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SyntaxHighlighter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SyntaxHighlighter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SyntaxHighlighter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SystemFont",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SyntaxHighlighter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_SystemFont),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_SystemFont),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_SystemFont),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TCPServer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("SystemFont", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TCPServer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TCPServer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TCPServer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TLSOptions",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TCPServer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TLSOptions),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TLSOptions),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TLSOptions),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TabBar",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TLSOptions", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TabBar),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TabBar),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TabBar),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TabContainer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TabBar", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TabContainer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TabContainer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TabContainer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextEdit",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TabContainer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TextEdit),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TextEdit),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TextEdit),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextLine",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextEdit", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TextLine),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TextLine),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TextLine),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextMesh",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextLine", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TextMesh),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TextMesh),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TextMesh),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextParagraph",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextMesh", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TextParagraph),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TextParagraph),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TextParagraph),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextServer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextParagraph", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TextServer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TextServer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TextServer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextServerAdvanced",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextServer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TextServerAdvanced),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TextServerAdvanced),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TextServerAdvanced),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextServerDummy",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextServerAdvanced", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TextServerDummy),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TextServerDummy),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TextServerDummy),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextServerExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextServerDummy", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TextServerExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TextServerExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TextServerExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextServerManager",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextServerExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TextServerManager),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TextServerManager),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TextServerManager),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Texture",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextServerManager", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Texture),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Texture),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Texture),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Texture2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Texture", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Texture2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Texture2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Texture2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Texture2DArray",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Texture2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Texture2DArray),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Texture2DArray),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Texture2DArray),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Texture2DArrayRD",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Texture2DArray", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Texture2DArrayRD),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Texture2DArrayRD),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Texture2DArrayRD),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Texture2DRD",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Texture2DArrayRD", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Texture2DRD),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Texture2DRD),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Texture2DRD),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Texture3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Texture2DRD", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Texture3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Texture3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Texture3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Texture3DRD",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Texture3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Texture3DRD),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Texture3DRD),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Texture3DRD),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextureButton",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Texture3DRD", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TextureButton),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TextureButton),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TextureButton),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextureCubemapArrayRD",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextureButton", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TextureCubemapArrayRD),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TextureCubemapArrayRD),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TextureCubemapArrayRD),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextureCubemapRD",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextureCubemapArrayRD", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TextureCubemapRD),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TextureCubemapRD),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TextureCubemapRD),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextureLayered",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextureCubemapRD", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TextureLayered),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TextureLayered),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TextureLayered),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextureLayeredRD",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextureLayered", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TextureLayeredRD),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TextureLayeredRD),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TextureLayeredRD),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextureProgressBar",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextureLayeredRD", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TextureProgressBar),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TextureProgressBar),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TextureProgressBar),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextureRect",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextureProgressBar", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TextureRect),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TextureRect),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TextureRect),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Theme",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TextureRect", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Theme),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Theme),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Theme),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ThemeDB",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Theme", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ThemeDB),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ThemeDB),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ThemeDB),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Thread",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ThemeDB", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Thread),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Thread),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Thread),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TileData",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Thread", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TileData),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TileData),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TileData),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TileMap",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TileData", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TileMap),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TileMap),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TileMap),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TileMapLayer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TileMap", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TileMapLayer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TileMapLayer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TileMapLayer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TileMapPattern",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TileMapLayer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TileMapPattern),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TileMapPattern),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TileMapPattern),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TileSet",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TileMapPattern", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TileSet),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TileSet),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TileSet),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TileSetAtlasSource",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TileSet", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TileSetAtlasSource),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TileSetAtlasSource),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TileSetAtlasSource),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TileSetScenesCollectionSource",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TileSetAtlasSource", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TileSetScenesCollectionSource),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TileSetScenesCollectionSource),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TileSetScenesCollectionSource),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TileSetSource",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TileSetScenesCollectionSource", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TileSetSource),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TileSetSource),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TileSetSource),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Time",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TileSetSource", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Time),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Time),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Time),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Timer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Time", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Timer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Timer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Timer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TorusMesh",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Timer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TorusMesh),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TorusMesh),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TorusMesh),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TouchScreenButton",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TorusMesh", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TouchScreenButton),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TouchScreenButton),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TouchScreenButton),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Translation",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TouchScreenButton", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Translation),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Translation),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Translation),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TranslationDomain",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Translation", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TranslationDomain),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TranslationDomain),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TranslationDomain),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TranslationServer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TranslationDomain", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TranslationServer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TranslationServer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TranslationServer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Tree",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TranslationServer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Tree),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Tree),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Tree),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TreeItem",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Tree", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TreeItem),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TreeItem),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TreeItem),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TriangleMesh",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TreeItem", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TriangleMesh),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TriangleMesh),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TriangleMesh),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TubeTrailMesh",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TriangleMesh", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_TubeTrailMesh),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_TubeTrailMesh),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_TubeTrailMesh),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Tween",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("TubeTrailMesh", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Tween),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Tween),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Tween),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Tweener",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Tween", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Tweener),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Tweener),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Tweener),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("UDPServer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Tweener", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_UDPServer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_UDPServer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_UDPServer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("UPNP",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("UDPServer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_UPNP),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_UPNP),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_UPNP),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("UPNPDevice",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("UPNP", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_UPNPDevice),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_UPNPDevice),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_UPNPDevice),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("UndoRedo",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("UPNPDevice", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_UndoRedo),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_UndoRedo),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_UndoRedo),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("UniformSetCacheRD",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("UndoRedo", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_UniformSetCacheRD),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_UniformSetCacheRD),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_UniformSetCacheRD),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VBoxContainer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("UniformSetCacheRD", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VBoxContainer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VBoxContainer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VBoxContainer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VFlowContainer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VBoxContainer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VFlowContainer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VFlowContainer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VFlowContainer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VScrollBar",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VFlowContainer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VScrollBar),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VScrollBar),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VScrollBar),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VSeparator",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VScrollBar", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VSeparator),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VSeparator),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VSeparator),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VSlider",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VSeparator", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VSlider),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VSlider),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VSlider),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VSplitContainer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VSlider", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VSplitContainer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VSplitContainer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VSplitContainer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VehicleBody3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VSplitContainer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VehicleBody3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VehicleBody3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VehicleBody3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VehicleWheel3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VehicleBody3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VehicleWheel3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VehicleWheel3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VehicleWheel3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VideoStream",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VehicleWheel3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VideoStream),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VideoStream),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VideoStream),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VideoStreamPlayback",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VideoStream", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VideoStreamPlayback),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VideoStreamPlayback),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VideoStreamPlayback),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VideoStreamPlayer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VideoStreamPlayback", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VideoStreamPlayer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VideoStreamPlayer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VideoStreamPlayer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VideoStreamTheora",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VideoStreamPlayer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VideoStreamTheora),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VideoStreamTheora),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VideoStreamTheora),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Viewport",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VideoStreamTheora", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Viewport),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Viewport),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Viewport),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ViewportTexture",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Viewport", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ViewportTexture),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ViewportTexture),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ViewportTexture),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisibleOnScreenEnabler2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ViewportTexture", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisibleOnScreenEnabler2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisibleOnScreenEnabler2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisibleOnScreenEnabler2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisibleOnScreenEnabler3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisibleOnScreenEnabler2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisibleOnScreenEnabler3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisibleOnScreenEnabler3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisibleOnScreenEnabler3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisibleOnScreenNotifier2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisibleOnScreenEnabler3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisibleOnScreenNotifier2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisibleOnScreenNotifier2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisibleOnScreenNotifier2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisibleOnScreenNotifier3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisibleOnScreenNotifier2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisibleOnScreenNotifier3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisibleOnScreenNotifier3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisibleOnScreenNotifier3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualInstance3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisibleOnScreenNotifier3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualInstance3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualInstance3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualInstance3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShader",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualInstance3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShader),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShader),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShader),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNode",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShader", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNode),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNode),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNode),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeBillboard",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNode", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeBillboard),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeBillboard),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeBillboard),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeBooleanConstant",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeBillboard", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeBooleanConstant),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeBooleanConstant),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeBooleanConstant),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeBooleanParameter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeBooleanConstant", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeBooleanParameter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeBooleanParameter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeBooleanParameter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeClamp",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeBooleanParameter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeClamp),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeClamp),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeClamp),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeColorConstant",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeClamp", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeColorConstant),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeColorConstant),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeColorConstant),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeColorFunc",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeColorConstant", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeColorFunc),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeColorFunc),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeColorFunc),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeColorOp",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeColorFunc", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeColorOp),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeColorOp),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeColorOp),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeColorParameter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeColorOp", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeColorParameter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeColorParameter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeColorParameter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeComment",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeColorParameter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeComment),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeComment),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeComment),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeCompare",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeComment", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeCompare),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeCompare),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeCompare),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeConstant",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeCompare", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeConstant),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeConstant),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeConstant),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeCubemap",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeConstant", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeCubemap),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeCubemap),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeCubemap),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeCubemapParameter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeCubemap", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeCubemapParameter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeCubemapParameter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeCubemapParameter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeCurveTexture",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeCubemapParameter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeCurveTexture),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeCurveTexture),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeCurveTexture),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeCurveXYZTexture",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeCurveTexture", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeCurveXYZTexture),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeCurveXYZTexture),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeCurveXYZTexture),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeCustom",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeCurveXYZTexture", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeCustom),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeCustom),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeCustom),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeDerivativeFunc",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeCustom", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeDerivativeFunc),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeDerivativeFunc),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeDerivativeFunc),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeDeterminant",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeDerivativeFunc", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeDeterminant),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeDeterminant),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeDeterminant),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeDistanceFade",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeDeterminant", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeDistanceFade),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeDistanceFade),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeDistanceFade),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeDotProduct",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeDistanceFade", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeDotProduct),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeDotProduct),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeDotProduct),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeExpression",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeDotProduct", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeExpression),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeExpression),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeExpression),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeFaceForward",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeExpression", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeFaceForward),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeFaceForward),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeFaceForward),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeFloatConstant",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeFaceForward", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeFloatConstant),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeFloatConstant),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeFloatConstant),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeFloatFunc",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeFloatConstant", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeFloatFunc),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeFloatFunc),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeFloatFunc),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeFloatOp",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeFloatFunc", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeFloatOp),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeFloatOp),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeFloatOp),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeFloatParameter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeFloatOp", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeFloatParameter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeFloatParameter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeFloatParameter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeFrame",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeFloatParameter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeFrame),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeFrame),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeFrame),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeFresnel",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeFrame", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeFresnel),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeFresnel),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeFresnel),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeGlobalExpression",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeFresnel", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeGlobalExpression),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeGlobalExpression),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeGlobalExpression),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeGroupBase",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeGlobalExpression", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeGroupBase),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeGroupBase),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeGroupBase),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeIf",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeGroupBase", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeIf),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeIf),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeIf),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeInput",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeIf", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeInput),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeInput),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeInput),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeIntConstant",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeInput", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeIntConstant),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeIntConstant),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeIntConstant),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeIntFunc",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeIntConstant", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeIntFunc),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeIntFunc),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeIntFunc),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeIntOp",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeIntFunc", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeIntOp),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeIntOp),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeIntOp),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeIntParameter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeIntOp", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeIntParameter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeIntParameter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeIntParameter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeIs",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeIntParameter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeIs),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeIs),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeIs),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeLinearSceneDepth",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeIs", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeLinearSceneDepth),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeLinearSceneDepth),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeLinearSceneDepth),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeMix",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeLinearSceneDepth", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeMix),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeMix),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeMix),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeMultiplyAdd",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeMix", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeMultiplyAdd),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeMultiplyAdd),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeMultiplyAdd),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeOuterProduct",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeMultiplyAdd", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeOuterProduct),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeOuterProduct),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeOuterProduct),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeOutput",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeOuterProduct", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeOutput),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeOutput),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeOutput),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParameter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeOutput", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeParameter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeParameter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeParameter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParameterRef",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParameter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeParameterRef),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeParameterRef),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeParameterRef),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParticleAccelerator",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParameterRef", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeParticleAccelerator),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeParticleAccelerator),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeParticleAccelerator),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParticleBoxEmitter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParticleAccelerator", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeParticleBoxEmitter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeParticleBoxEmitter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeParticleBoxEmitter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParticleConeVelocity",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParticleBoxEmitter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeParticleConeVelocity),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeParticleConeVelocity),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeParticleConeVelocity),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParticleEmit",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParticleConeVelocity", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeParticleEmit),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeParticleEmit),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeParticleEmit),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParticleEmitter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParticleEmit", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeParticleEmitter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeParticleEmitter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeParticleEmitter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParticleMeshEmitter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParticleEmitter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeParticleMeshEmitter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeParticleMeshEmitter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeParticleMeshEmitter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParticleMultiplyByAxisAngle",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParticleMeshEmitter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeParticleMultiplyByAxisAngle),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeParticleMultiplyByAxisAngle),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeParticleMultiplyByAxisAngle),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParticleOutput",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParticleMultiplyByAxisAngle", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeParticleOutput),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeParticleOutput),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeParticleOutput),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParticleRandomness",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParticleOutput", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeParticleRandomness),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeParticleRandomness),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeParticleRandomness),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParticleRingEmitter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParticleRandomness", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeParticleRingEmitter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeParticleRingEmitter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeParticleRingEmitter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParticleSphereEmitter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParticleRingEmitter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeParticleSphereEmitter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeParticleSphereEmitter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeParticleSphereEmitter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeProximityFade",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeParticleSphereEmitter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeProximityFade),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeProximityFade),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeProximityFade),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeRandomRange",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeProximityFade", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeRandomRange),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeRandomRange),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeRandomRange),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeRemap",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeRandomRange", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeRemap),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeRemap),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeRemap),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeReroute",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeRemap", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeReroute),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeReroute),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeReroute),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeResizableBase",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeReroute", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeResizableBase),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeResizableBase),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeResizableBase),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeRotationByAxis",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeResizableBase", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeRotationByAxis),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeRotationByAxis),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeRotationByAxis),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeSDFRaymarch",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeRotationByAxis", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeSDFRaymarch),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeSDFRaymarch),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeSDFRaymarch),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeSDFToScreenUV",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeSDFRaymarch", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeSDFToScreenUV),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeSDFToScreenUV),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeSDFToScreenUV),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeSample3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeSDFToScreenUV", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeSample3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeSample3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeSample3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeScreenNormalWorldSpace",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeSample3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeScreenNormalWorldSpace),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeScreenNormalWorldSpace),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeScreenNormalWorldSpace),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeScreenUVToSDF",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeScreenNormalWorldSpace", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeScreenUVToSDF),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeScreenUVToSDF),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeScreenUVToSDF),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeSmoothStep",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeScreenUVToSDF", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeSmoothStep),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeSmoothStep),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeSmoothStep),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeStep",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeSmoothStep", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeStep),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeStep),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeStep),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeSwitch",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeStep", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeSwitch),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeSwitch),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeSwitch),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTexture",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeSwitch", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeTexture),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeTexture),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeTexture),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTexture2DArray",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTexture", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeTexture2DArray),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeTexture2DArray),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeTexture2DArray),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTexture2DArrayParameter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTexture2DArray", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeTexture2DArrayParameter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeTexture2DArrayParameter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeTexture2DArrayParameter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTexture2DParameter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTexture2DArrayParameter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeTexture2DParameter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeTexture2DParameter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeTexture2DParameter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTexture3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTexture2DParameter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeTexture3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeTexture3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeTexture3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTexture3DParameter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTexture3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeTexture3DParameter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeTexture3DParameter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeTexture3DParameter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTextureParameter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTexture3DParameter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeTextureParameter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeTextureParameter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeTextureParameter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTextureParameterTriplanar",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTextureParameter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeTextureParameterTriplanar),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeTextureParameterTriplanar),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeTextureParameterTriplanar),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTextureSDF",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTextureParameterTriplanar", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeTextureSDF),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeTextureSDF),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeTextureSDF),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTextureSDFNormal",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTextureSDF", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeTextureSDFNormal),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeTextureSDFNormal),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeTextureSDFNormal),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTransformCompose",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTextureSDFNormal", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeTransformCompose),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeTransformCompose),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeTransformCompose),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTransformConstant",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTransformCompose", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeTransformConstant),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeTransformConstant),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeTransformConstant),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTransformDecompose",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTransformConstant", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeTransformDecompose),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeTransformDecompose),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeTransformDecompose),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTransformFunc",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTransformDecompose", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeTransformFunc),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeTransformFunc),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeTransformFunc),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTransformOp",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTransformFunc", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeTransformOp),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeTransformOp),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeTransformOp),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTransformParameter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTransformOp", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeTransformParameter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeTransformParameter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeTransformParameter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTransformVecMult",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTransformParameter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeTransformVecMult),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeTransformVecMult),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeTransformVecMult),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeUIntConstant",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeTransformVecMult", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeUIntConstant),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeUIntConstant),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeUIntConstant),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeUIntFunc",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeUIntConstant", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeUIntFunc),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeUIntFunc),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeUIntFunc),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeUIntOp",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeUIntFunc", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeUIntOp),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeUIntOp),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeUIntOp),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeUIntParameter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeUIntOp", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeUIntParameter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeUIntParameter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeUIntParameter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeUVFunc",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeUIntParameter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeUVFunc),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeUVFunc),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeUVFunc),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeUVPolarCoord",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeUVFunc", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeUVPolarCoord),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeUVPolarCoord),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeUVPolarCoord),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVarying",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeUVPolarCoord", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeVarying),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeVarying),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeVarying),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVaryingGetter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVarying", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeVaryingGetter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeVaryingGetter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeVaryingGetter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVaryingSetter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVaryingGetter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeVaryingSetter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeVaryingSetter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeVaryingSetter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVec2Constant",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVaryingSetter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeVec2Constant),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeVec2Constant),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeVec2Constant),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVec2Parameter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVec2Constant", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeVec2Parameter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeVec2Parameter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeVec2Parameter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVec3Constant",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVec2Parameter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeVec3Constant),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeVec3Constant),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeVec3Constant),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVec3Parameter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVec3Constant", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeVec3Parameter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeVec3Parameter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeVec3Parameter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVec4Constant",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVec3Parameter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeVec4Constant),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeVec4Constant),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeVec4Constant),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVec4Parameter",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVec4Constant", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeVec4Parameter),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeVec4Parameter),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeVec4Parameter),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVectorBase",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVec4Parameter", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeVectorBase),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeVectorBase),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeVectorBase),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVectorCompose",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVectorBase", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeVectorCompose),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeVectorCompose),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeVectorCompose),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVectorDecompose",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVectorCompose", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeVectorDecompose),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeVectorDecompose),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeVectorDecompose),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVectorDistance",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVectorDecompose", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeVectorDistance),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeVectorDistance),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeVectorDistance),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVectorFunc",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVectorDistance", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeVectorFunc),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeVectorFunc),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeVectorFunc),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVectorLen",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVectorFunc", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeVectorLen),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeVectorLen),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeVectorLen),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVectorOp",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVectorLen", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeVectorOp),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeVectorOp),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeVectorOp),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVectorRefract",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVectorOp", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeVectorRefract),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeVectorRefract),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeVectorRefract),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeWorldPositionFromDepth",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeVectorRefract", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VisualShaderNodeWorldPositionFromDepth),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VisualShaderNodeWorldPositionFromDepth),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VisualShaderNodeWorldPositionFromDepth),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VoxelGI",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VisualShaderNodeWorldPositionFromDepth", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VoxelGI),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VoxelGI),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VoxelGI),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VoxelGIData",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VoxelGI", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_VoxelGIData),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_VoxelGIData),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_VoxelGIData),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WeakRef",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("VoxelGIData", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_WeakRef),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_WeakRef),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_WeakRef),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WebRTCDataChannel",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WeakRef", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_WebRTCDataChannel),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_WebRTCDataChannel),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_WebRTCDataChannel),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WebRTCDataChannelExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WebRTCDataChannel", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_WebRTCDataChannelExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_WebRTCDataChannelExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_WebRTCDataChannelExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WebRTCMultiplayerPeer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WebRTCDataChannelExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_WebRTCMultiplayerPeer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_WebRTCMultiplayerPeer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_WebRTCMultiplayerPeer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WebRTCPeerConnection",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WebRTCMultiplayerPeer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_WebRTCPeerConnection),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_WebRTCPeerConnection),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_WebRTCPeerConnection),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WebRTCPeerConnectionExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WebRTCPeerConnection", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_WebRTCPeerConnectionExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_WebRTCPeerConnectionExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_WebRTCPeerConnectionExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WebSocketMultiplayerPeer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WebRTCPeerConnectionExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_WebSocketMultiplayerPeer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_WebSocketMultiplayerPeer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_WebSocketMultiplayerPeer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WebSocketPeer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WebSocketMultiplayerPeer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_WebSocketPeer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_WebSocketPeer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_WebSocketPeer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WebXRInterface",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WebSocketPeer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_WebXRInterface),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_WebXRInterface),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_WebXRInterface),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Window",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WebXRInterface", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_Window),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_Window),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_Window),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WorkerThreadPool",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("Window", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_WorkerThreadPool),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_WorkerThreadPool),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_WorkerThreadPool),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("World2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WorkerThreadPool", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_World2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_World2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_World2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("World3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("World2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_World3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_World3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_World3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WorldBoundaryShape2D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("World3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_WorldBoundaryShape2D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_WorldBoundaryShape2D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_WorldBoundaryShape2D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WorldBoundaryShape3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WorldBoundaryShape2D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_WorldBoundaryShape3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_WorldBoundaryShape3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_WorldBoundaryShape3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WorldEnvironment",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WorldBoundaryShape3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_WorldEnvironment),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_WorldEnvironment),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_WorldEnvironment),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("X509Certificate",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("WorldEnvironment", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_X509Certificate),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_X509Certificate),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_X509Certificate),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XMLParser",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("X509Certificate", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_XMLParser),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_XMLParser),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_XMLParser),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRAnchor3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XMLParser", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_XRAnchor3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_XRAnchor3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_XRAnchor3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRBodyModifier3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRAnchor3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_XRBodyModifier3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_XRBodyModifier3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_XRBodyModifier3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRBodyTracker",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRBodyModifier3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_XRBodyTracker),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_XRBodyTracker),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_XRBodyTracker),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRCamera3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRBodyTracker", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_XRCamera3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_XRCamera3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_XRCamera3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRController3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRCamera3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_XRController3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_XRController3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_XRController3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRControllerTracker",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRController3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_XRControllerTracker),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_XRControllerTracker),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_XRControllerTracker),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRFaceModifier3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRControllerTracker", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_XRFaceModifier3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_XRFaceModifier3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_XRFaceModifier3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRFaceTracker",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRFaceModifier3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_XRFaceTracker),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_XRFaceTracker),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_XRFaceTracker),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRHandModifier3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRFaceTracker", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_XRHandModifier3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_XRHandModifier3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_XRHandModifier3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRHandTracker",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRHandModifier3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_XRHandTracker),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_XRHandTracker),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_XRHandTracker),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRInterface",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRHandTracker", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_XRInterface),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_XRInterface),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_XRInterface),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRInterfaceExtension",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRInterface", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_XRInterfaceExtension),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_XRInterfaceExtension),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_XRInterfaceExtension),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRNode3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRInterfaceExtension", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_XRNode3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_XRNode3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_XRNode3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XROrigin3D",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRNode3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_XROrigin3D),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_XROrigin3D),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_XROrigin3D),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRPose",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XROrigin3D", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_XRPose),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_XRPose),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_XRPose),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRPositionalTracker",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRPose", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_XRPositionalTracker),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_XRPositionalTracker),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_XRPositionalTracker),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRServer",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRPositionalTracker", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_XRServer),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_XRServer),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_XRServer),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRTracker",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRServer", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_XRTracker),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_XRTracker),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_XRTracker),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRVRS",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRTracker", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_XRVRS),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_XRVRS),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_XRVRS),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ZIPPacker",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("XRVRS", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ZIPPacker),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ZIPPacker),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ZIPPacker),
-		))
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ZIPReader",
-		NewGDExtensionInstanceBindingCallbacks(
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ZIPPacker", &cbs)
+	}
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_ZIPReader),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_ZIPReader),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_ZIPReader),
-		))
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("ZIPReader", &cbs)
+	}
 	GDNativeConstructors.Clear()
 	GDNativeConstructors.Set("AESContext", NewGDExtensionClassFromAESContextOwner)
 	GDNativeConstructors.Set("AStar2D", NewGDExtensionClassFromAStar2DOwner)

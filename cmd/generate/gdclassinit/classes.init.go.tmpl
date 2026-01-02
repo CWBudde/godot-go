@@ -26,12 +26,14 @@ import (
 func RegisterEngineClasses() {
 	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Clear()
 	{{ range $i, $c := $view.Classes -}}
-	GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("{{ $c.Name }}",
-		NewGDExtensionInstanceBindingCallbacks(
+	{
+		cbs := NewGDExtensionInstanceBindingCallbacks(
 			(GDExtensionInstanceBindingCreateCallback)(C.cgo_gdextension_class_binding_create_callback_{{ $c.Name }}),
 			(GDExtensionInstanceBindingFreeCallback)(C.cgo_gdextension_class_binding_free_callback_{{ $c.Name }}),
 			(GDExtensionInstanceBindingReferenceCallback)(C.cgo_gdextension_class_binding_reference_callback_{{ $c.Name }}),
-		))
+		)
+		GDExtensionBindingGDExtensionInstanceBindingCallbacks.Set("{{ $c.Name }}", &cbs)
+	}
 	{{ end -}}
 
 	GDNativeConstructors.Clear()

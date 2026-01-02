@@ -36,7 +36,7 @@ func (x *GDExtensionInterface) LoadProcAddresses(
 ) {
 	x.GetProcAddress = pGetProcAddress
 	x.Library = pLibrary
-	x.Token = unsafe.Pointer(&pLibrary)
+	x.Token = unsafe.Pointer(pLibrary)
 
 	{{/* pnr.Pin(x.GetProcAddress)
 	pnr.Pin(x.Library)

@@ -10,6 +10,7 @@ import "C"
 import (
 	"fmt"
 	"reflect"
+	"runtime"
 	"strings"
 	"unsafe"
 
@@ -26,12 +27,17 @@ func ClassDBAddPropertyGroup(t GDClass, p_name string, p_prefix string) {
 	if _, ok := Internal.GDRegisteredGDClasses.Get(cn); !ok {
 		panic(fmt.Sprintf(`Trying to add property group "%s" to non-existing class "%s".`, p_name, cn))
 	}
+	p := runtime.Pinner{}
+	defer p.Unpin()
 	className := NewStringNameWithLatin1Chars(cn)
 	defer className.Destroy()
+	p.Pin(&className)
 	name := NewStringWithUtf8Chars(p_name)
 	defer name.Destroy()
+	p.Pin(&name)
 	prefix := NewStringWithUtf8Chars(p_prefix)
 	defer prefix.Destroy()
+	p.Pin(&prefix)
 	log.Info("register property group",
 		zap.String("class", cn),
 		zap.String("name", p_name),
@@ -50,12 +56,17 @@ func ClassDBAddPropertySubgroup(t GDClass, p_name string, p_prefix string) {
 	if _, ok := Internal.GDRegisteredGDClasses.Get(cn); !ok {
 		panic(fmt.Sprintf(`Trying to add property sub-group "%s" to non-existing class "%s".`, p_name, cn))
 	}
+	p := runtime.Pinner{}
+	defer p.Unpin()
 	className := NewStringNameWithLatin1Chars(cn)
 	defer className.Destroy()
+	p.Pin(&className)
 	name := NewStringWithUtf8Chars(p_name)
 	defer name.Destroy()
+	p.Pin(&name)
 	prefix := NewStringWithUtf8Chars(p_prefix)
 	defer prefix.Destroy()
+	p.Pin(&prefix)
 	log.Info("register property sub-group",
 		zap.String("class", cn),
 		zap.String("name", p_name),
@@ -91,6 +102,8 @@ func ClassDBAddProperty(
 	if _, ok := ci.PropertyNameSet[pn]; ok {
 		panic(fmt.Sprintf(`Property "%s" already exists in class "%s".`, pn, cn))
 	}
+	p := runtime.Pinner{}
+	defer p.Unpin()
 	var (
 		setter *GoMethodMetadata
 		getter *GoMethodMetadata
@@ -125,10 +138,13 @@ func ClassDBAddProperty(
 	ci.PropertyNameSet[pn] = struct{}{}
 	className := NewStringNameWithLatin1Chars(cn)
 	defer className.Destroy()
+	p.Pin(&className)
 	propName := NewStringNameWithLatin1Chars(pn)
 	defer propName.Destroy()
+	p.Pin(&propName)
 	hint := NewStringWithUtf8Chars("")
 	defer hint.Destroy()
+	p.Pin(&hint)
 	// register with Godot
 	prop_info := NewGDExtensionPropertyInfo(
 		className.AsGDExtensionConstStringNamePtr(),
@@ -138,10 +154,13 @@ func ClassDBAddProperty(
 		hint.AsGDExtensionConstStringPtr(),
 		uint32(PROPERTY_USAGE_DEFAULT),
 	)
+	p.Pin(&prop_info)
 	snSetterGDName := NewStringNameWithLatin1Chars(setter.GdMethodName)
 	defer snSetterGDName.Destroy()
+	p.Pin(&snSetterGDName)
 	snGetterGDName := NewStringNameWithLatin1Chars(getter.GdMethodName)
 	defer snGetterGDName.Destroy()
+	p.Pin(&snGetterGDName)
 	log.Info("register property",
 		zap.String("class", cn),
 		zap.String("name", p_property_name),
@@ -167,6 +186,8 @@ func ClassDBAddSignal(t GDClass, signalName string, params ...SignalParam) {
 		zap.String("signalName", signalName),
 		zap.Any("params", params),
 	)
+	p := runtime.Pinner{}
+	defer p.Unpin()
 	typeName := t.GetClassName()
 	ci, ok := Internal.GDRegisteredGDClasses.Get(typeName)
 	if !ok {
@@ -179,16 +200,19 @@ func ClassDBAddSignal(t GDClass, signalName string, params ...SignalParam) {
 	}
 	ci.SignalNameSet[signalName] = struct{}{}
 	paramArr := make([]GDExtensionPropertyInfo, len(params))
-	for i, p := range params {
+	for i, pParam := range params {
 		snTypeName := NewStringNameWithLatin1Chars(typeName)
 		defer snTypeName.Destroy()
-		snName := NewStringNameWithLatin1Chars(p.Name)
+		p.Pin(&snTypeName)
+		snName := NewStringNameWithLatin1Chars(pParam.Name)
 		defer snName.Destroy()
+		p.Pin(&snName)
 		hintString := NewStringWithUtf8Chars("")
 		defer hintString.Destroy()
+		p.Pin(&hintString)
 		paramArr[i] = NewGDExtensionPropertyInfo(
 			snTypeName.AsGDExtensionConstStringNamePtr(),
-			p.Type,
+			pParam.Type,
 			snName.AsGDExtensionConstStringNamePtr(),
 			(uint32)(PROPERTY_HINT_NONE),
 			hintString.AsGDExtensionConstStringPtr(),
@@ -199,24 +223,29 @@ func ClassDBAddSignal(t GDClass, signalName string, params ...SignalParam) {
 	}
 	var pi *GDExtensionPropertyInfo
 	if len(paramArr) > 0 {
+		p.Pin(&paramArr[0])
 		pi = (*GDExtensionPropertyInfo)(unsafe.Pointer(&paramArr[0]))
 	} else {
 		pi = (*GDExtensionPropertyInfo)(nullptr)
 	}
 	snTypeName := NewStringNameWithLatin1Chars(typeName)
 	defer snTypeName.Destroy()
+	p.Pin(&snTypeName)
 	snSignalName := NewStringNameWithLatin1Chars(signalName)
 	defer snSignalName.Destroy()
+	p.Pin(&snSignalName)
 	log.Info("register signal",
 		zap.String("class", typeName),
 		zap.String("name", signalName),
 	)
+	log.Info("calling CallFunc_GDExtensionInterfaceClassdbRegisterExtensionClassSignal")
 	CallFunc_GDExtensionInterfaceClassdbRegisterExtensionClassSignal(
 		FFI.Library,
 		snTypeName.AsGDExtensionConstStringNamePtr(),
 		snSignalName.AsGDExtensionConstStringNamePtr(),
 		pi,
 		GDExtensionInt(len(params)))
+	log.Info("returned from CallFunc_GDExtensionInterfaceClassdbRegisterExtensionClassSignal")
 }
 
 func ClassDBBindMethod[T GDClass](

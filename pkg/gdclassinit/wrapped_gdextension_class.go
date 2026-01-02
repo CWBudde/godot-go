@@ -25,18 +25,16 @@ func GoCallback_GDExtensionBindingCreate(p_type_name *C.char, p_token unsafe.Poi
 	if inst == nil {
 		log.Panic("no instance returned")
 	}
-	ptr := &inst
+	ptr := new(Object)
+	*ptr = inst
 	pnr.Pin(ptr)
 	return (unsafe.Pointer)(ptr)
 }
 
 //export GoCallback_GDExtensionBindingFree
 func GoCallback_GDExtensionBindingFree(p_type_name *C.char, p_token unsafe.Pointer, p_instance unsafe.Pointer, p_binding unsafe.Pointer) {
-	// typeName := C.GoString(p_type_name)
-	// log.Debug("GoCallback_GDExtensionBindingFree called",
-	// 	zap.String("class", typeName),
-	// )
-	// GDNativeConstructors.Delete(typeName)
+	// Pinner.Unpin() unpins ALL objects pinned by the Pinner. We cannot use it for individual objects.
+	// We accept the memory leak for now to avoid crashing.
 }
 
 //export GoCallback_GDExtensionBindingReference

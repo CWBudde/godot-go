@@ -379,6 +379,7 @@ func NewGDExtensionClassMethodInfoFromMethodBind(md *GoMethodMetadata) *GDExtens
 		pnr.Pin(md.gdeDefaultArgumentPtrs[i])
 	}
 	gdMethodNameStringName := NewStringNameWithLatin1Chars(md.GdMethodName)
+	pnr.Pin(&gdMethodNameStringName)
 	// Note: StringName intentionally NOT destroyed - Godot keeps a reference
 	// to this pointer in the method info for the lifetime of the class.
 	ret := NewGDExtensionClassMethodInfo(

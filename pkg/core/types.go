@@ -86,6 +86,7 @@ func NewClassInfo(
 	validateProperty func(*GDExtensionPropertyInfo),
 ) *ClassInfo {
 	nameStringName := NewStringNameWithLatin1Chars(name)
+	pnr.Pin(&nameStringName)
 	ret := &ClassInfo{
 		Name:                name,
 		NameAsStringNamePtr: nameStringName.AsGDExtensionConstStringNamePtr(),
