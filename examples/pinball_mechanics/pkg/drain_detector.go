@@ -5,6 +5,7 @@ import (
 	. "github.com/godot-go/godot-go/pkg/core"
 	. "github.com/godot-go/godot-go/pkg/ffi"
 	. "github.com/godot-go/godot-go/pkg/gdclassimpl"
+	"github.com/godot-go/godot-go/pkg/log"
 )
 
 // DrainDetector implements GDClass evidence.
@@ -23,6 +24,7 @@ func (d *DrainDetector) GetParentClassName() string {
 }
 
 func (d *DrainDetector) V_Ready() {
+	log.Info("DrainDetector: _ready")
 	signal := NewStringNameWithLatin1Chars("body_entered")
 	defer signal.Destroy()
 	method := NewStringNameWithLatin1Chars("_on_body_entered")

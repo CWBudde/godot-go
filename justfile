@@ -11,10 +11,14 @@ GODOT := env('GODOT', `which godot || true`)
 CWD := `pwd`
 OUTPUT_PATH := "test/demo/lib"
 TEST_MAIN := "test/main.go"
+PINBALL_PATH := "examples/pinball_mechanics"
+PINBALL_OUTPUT_PATH := "examples/pinball_mechanics/lib"
+PINBALL_MAIN := "examples/pinball_mechanics/main.go"
 
 # Determine binary extension based on OS
 
 TEST_BINARY_PATH := if GOOS == "windows" { OUTPUT_PATH + "/libgodotgo-test-windows-" + GOARCH + ".dll" } else if GOOS == "darwin" { OUTPUT_PATH + "/libgodotgo-test-macos-" + GOARCH + ".framework" } else if GOOS == "linux" { OUTPUT_PATH + "/libgodotgo-test-linux-" + GOARCH + ".so" } else { OUTPUT_PATH + "/libgodotgo-test-" + GOOS + "-" + GOARCH + ".so" }
+PINBALL_BINARY_PATH := if GOOS == "windows" { PINBALL_OUTPUT_PATH + "/libgodotgo-pinball-mechanics-windows-" + GOARCH + ".dll" } else if GOOS == "darwin" { PINBALL_OUTPUT_PATH + "/libgodotgo-pinball-mechanics-macos-" + GOARCH + ".framework" } else if GOOS == "linux" { PINBALL_OUTPUT_PATH + "/libgodotgo-pinball-mechanics-linux-" + GOARCH + ".so" } else { PINBALL_OUTPUT_PATH + "/libgodotgo-pinball-mechanics-" + GOOS + "-" + GOARCH + ".so" }
 
 #################################
 # Setup
@@ -219,3 +223,27 @@ open_demo_in_editor:
     GOTRACEBACK=1 \
     GODEBUG=gctrace=1,asyncpreemptoff=1,cgocheck=1,invalidptr=1,clobberfree=1,tracebackancestors=5 \
     "{{ GODOT }}" --verbose --debug --path test/demo/ --editor
+
+#################################
+# Examples
+#################################
+
+# Build the pinball mechanics example extension library
+pinball_build: goenv
+    CGO_ENABLED=1 \
+    GOOS={{ GOOS }} \
+    GOARCH={{ GOARCH }} \
+    CGO_CFLAGS='-fPIC -g -ggdb -O0' \
+    CGO_LDFLAGS='-g3 -g -O0' \
+    go build -gcflags=all="-N -l" -tags tools -buildmode=c-shared -v -x -trimpath -o "{{ PINBALL_BINARY_PATH }}" {{ PINBALL_MAIN }}
+
+# Run the pinball mechanics example
+pinball_run: pinball_build
+    "{{ GODOT }}" --path "{{ PINBALL_PATH }}"
+
+# Run the pinball mechanics example with Go runtime diagnostics enabled
+pinball_run_debug: pinball_build
+    LOG_LEVEL=debug \
+    GOTRACEBACK=crash \
+    GODEBUG=cgocheck=1,asyncpreemptoff=1,invalidptr=1,clobberfree=1,tracebackancestors=5 \
+    "{{ GODOT }}" --path "{{ PINBALL_PATH }}"

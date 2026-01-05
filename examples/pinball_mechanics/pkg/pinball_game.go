@@ -4,6 +4,7 @@ import (
 	. "github.com/godot-go/godot-go/pkg/builtin"
 	. "github.com/godot-go/godot-go/pkg/core"
 	. "github.com/godot-go/godot-go/pkg/gdclassimpl"
+	"github.com/godot-go/godot-go/pkg/log"
 )
 
 // PinballGame implements GDClass evidence.
@@ -22,11 +23,12 @@ func (p *PinballGame) GetParentClassName() string {
 }
 
 func (p *PinballGame) V_Ready() {
-	setupPinballActions()
+	log.Info("PinballGame: _ready")
 	p.connectSignals()
 }
 
 func (p *PinballGame) connectSignals() {
+	log.Info("PinballGame: connect signals")
 	scoreNode := p.GetNodeOrNull(nodePath("UI/ScoreSystem"))
 	if scoreNode == nil {
 		printLine("PinballGame: ScoreSystem not found")
@@ -39,11 +41,13 @@ func (p *PinballGame) connectSignals() {
 		return
 	}
 
+	log.Info("PinballGame: connect bumpers")
 	connectBumper(scoreSystem, p.GetNodeOrNull(nodePath("BumperLeft")))
 	connectBumper(scoreSystem, p.GetNodeOrNull(nodePath("BumperRight")))
 
 	drainNode := p.GetNodeOrNull(nodePath("Drain"))
 	if drainNode != nil {
+		log.Info("PinballGame: connect drain to score")
 		connectSignalTo(scoreSystem, drainNode, "drained", "_on_ball_drained")
 	}
 
@@ -52,6 +56,7 @@ func (p *PinballGame) connectSignals() {
 		// Use getGDClassInstance for custom GDExtension classes
 		launcher := getGDClassInstance[*BallLauncher](launcherNode)
 		if launcher != nil {
+			log.Info("PinballGame: connect drain to launcher")
 			connectSignalTo(launcher, drainNode, "drained", "_on_ball_drained")
 		}
 	}

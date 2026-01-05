@@ -15,11 +15,17 @@ import (
 )
 
 func registerPinballTypes() {
+	log.Info("pinball: registering PinballGame")
 	RegisterClassPinballGame()
+	log.Info("pinball: registering FlipperController")
 	RegisterClassFlipperController()
+	log.Info("pinball: registering BallLauncher")
 	RegisterClassBallLauncher()
+	log.Info("pinball: registering Bumper")
 	RegisterClassBumper()
+	log.Info("pinball: registering DrainDetector")
 	RegisterClassDrainDetector()
+	log.Info("pinball: registering ScoreSystem")
 	RegisterClassScoreSystem()
 }
 

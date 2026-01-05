@@ -5,6 +5,7 @@ import (
 	. "github.com/godot-go/godot-go/pkg/core"
 	. "github.com/godot-go/godot-go/pkg/ffi"
 	. "github.com/godot-go/godot-go/pkg/gdclassimpl"
+	"github.com/godot-go/godot-go/pkg/log"
 )
 
 // Bumper implements GDClass evidence.
@@ -25,6 +26,7 @@ func (b *Bumper) GetParentClassName() string {
 }
 
 func (b *Bumper) V_Ready() {
+	log.Info("Bumper: _ready")
 	b.scoreValue = 100
 	b.strength = 180
 

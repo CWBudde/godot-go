@@ -52,6 +52,13 @@ shape = SubResource("5")
 
 [node name="FlipperJoint" type="PinJoint2D" parent="FlipperLeft"]
 position = Vector2(0, 0)
+node_a = NodePath("../FlipperAnchor")
+node_b = NodePath("../FlipperBody")
+motor_enabled = true
+angular_limit_enabled = true
+softness = 0.2
+angular_limit_lower = -1.0
+angular_limit_upper = 0.2
 
 [node name="FlipperRight" type="FlipperController" parent="."]
 position = Vector2(280, 430)
@@ -71,6 +78,13 @@ shape = SubResource("5")
 
 [node name="FlipperJoint" type="PinJoint2D" parent="FlipperRight"]
 position = Vector2(0, 0)
+node_a = NodePath("../FlipperAnchor")
+node_b = NodePath("../FlipperBody")
+motor_enabled = true
+angular_limit_enabled = true
+softness = 0.2
+angular_limit_lower = -0.2
+angular_limit_upper = 1.0
 
 [node name="BumperLeft" type="Bumper" parent="."]
 position = Vector2(160, 200)

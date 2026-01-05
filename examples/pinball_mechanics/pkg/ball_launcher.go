@@ -2,8 +2,10 @@ package pkg
 
 import (
 	. "github.com/godot-go/godot-go/pkg/builtin"
+	. "github.com/godot-go/godot-go/pkg/constant"
 	. "github.com/godot-go/godot-go/pkg/core"
 	. "github.com/godot-go/godot-go/pkg/gdclassimpl"
+	"github.com/godot-go/godot-go/pkg/log"
 )
 
 // BallLauncher implements GDClass evidence.
@@ -11,10 +13,10 @@ var _ GDClass = (*BallLauncher)(nil)
 
 type BallLauncher struct {
 	Node2DImpl
-	actionName  StringName
-	initialized bool
-	ball        RigidBody2D
-	startPos    Vector2
+	ball         RigidBody2D
+	startPos     Vector2
+	launchHeld   bool
+	initialized  bool
 }
 
 func (b *BallLauncher) GetClassName() string {
@@ -26,8 +28,8 @@ func (b *BallLauncher) GetParentClassName() string {
 }
 
 func (b *BallLauncher) V_Ready() {
+	log.Info("BallLauncher: _ready")
 	b.SetPhysicsProcess(true)
-	b.actionName = NewStringNameWithLatin1Chars(actionLaunch)
 	b.initialized = true
 	b.cacheBall()
 }
@@ -40,15 +42,15 @@ func (b *BallLauncher) V_PhysicsProcess(_delta float64) {
 	if input == nil {
 		return
 	}
-	if input.IsActionJustPressed(b.actionName, true) {
+	pressed := input.IsKeyPressed(KEY_SPACE)
+	if pressed && !b.launchHeld {
 		b.launchBall()
 	}
+	b.launchHeld = pressed
 }
 
 func (b *BallLauncher) V_ExitTree() {
-	if b.initialized {
-		b.actionName.Destroy()
-	}
+	b.initialized = false
 }
 
 func (b *BallLauncher) OnBallDrained(body Node2D) {

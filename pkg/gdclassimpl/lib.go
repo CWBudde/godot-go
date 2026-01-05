@@ -27,6 +27,9 @@ func (cx *ObjectImpl) ToGoString() string {
 }
 
 func GetInputSingleton() Input {
-	owner := (*GodotObject)(unsafe.Pointer(GetSingleton("Input")))
-	return NewInputWithGodotOwnerObject(owner)
+	owner := GetSingleton("Input")
+	if owner == nil {
+		return nil
+	}
+	return NewInputWithGodotOwnerObject((*GodotObject)(unsafe.Pointer(owner)))
 }

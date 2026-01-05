@@ -6,7 +6,6 @@ package builtin
 import "C"
 
 import (
-	"fmt"
 	"runtime"
 	"unsafe"
 
@@ -26,42 +25,17 @@ func NewStringNameWithGDExtensionConstStringNamePtr(ptr GDExtensionConstStringNa
 }
 
 func NewStringNameWithLatin1Chars(content string) StringName {
-	cx := String{}
-	defer cx.Destroy()
-	ptr := (GDExtensionUninitializedStringPtr)(cx.NativePtr())
-	// log.Debug("create string name",
-	// 	zap.String("ptr", fmt.Sprintf("%p", ptr)),
-	// 	zap.Uintptr("ptr_int", uintptr(ptr)),
-	// 	zap.Any("text", content),
-	// 	zap.Any("cx", cx),
-	// )
-	p := runtime.Pinner{}
-	p.Pin(&cx)
-	defer p.Unpin()
-	CallFunc_GDExtensionInterfaceStringNewWithLatin1Chars(ptr, content)
-	// log.Debug("create string name after",
-	// 	zap.String("ptr", fmt.Sprintf("%p", ptr)),
-	// 	zap.Uintptr("ptr_int", uintptr(ptr)),
-	// 	zap.Any("text", content),
-	// 	zap.Any("cx", cx),
-	// )
-	return NewStringNameWithString(cx)
+	cx := StringName{}
+	ptr := (GDExtensionUninitializedStringNamePtr)(cx.NativePtr())
+	CallFunc_GDExtensionInterfaceStringNameNewWithLatin1Chars(ptr, content, GDExtensionBool(0))
+	return cx
 }
 
 func NewStringNameWithUtf8Chars(content string) StringName {
-	cx := String{}
-	defer cx.Destroy()
-	ptr := (GDExtensionUninitializedStringPtr)(cx.NativePtr())
-	log.Debug("create string name",
-		zap.String("ptr", fmt.Sprintf("%p", ptr)),
-		zap.Uintptr("ptr_int", uintptr(unsafe.Pointer(ptr))),
-		zap.Any("text", content),
-	)
-	p := runtime.Pinner{}
-	p.Pin(&cx)
-	defer p.Unpin()
-	CallFunc_GDExtensionInterfaceStringNewWithUtf8Chars(ptr, content)
-	return NewStringNameWithString(cx)
+	cx := StringName{}
+	ptr := (GDExtensionUninitializedStringNamePtr)(cx.NativePtr())
+	CallFunc_GDExtensionInterfaceStringNameNewWithUtf8Chars(ptr, content)
+	return cx
 }
 
 func (cx StringName) AsString() String {

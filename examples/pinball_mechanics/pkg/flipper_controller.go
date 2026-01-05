@@ -4,8 +4,10 @@ import (
 	"strings"
 
 	. "github.com/godot-go/godot-go/pkg/builtin"
+	. "github.com/godot-go/godot-go/pkg/constant"
 	. "github.com/godot-go/godot-go/pkg/core"
 	. "github.com/godot-go/godot-go/pkg/gdclassimpl"
+	"github.com/godot-go/godot-go/pkg/log"
 )
 
 // FlipperController implements GDClass evidence.
@@ -13,7 +15,7 @@ var _ GDClass = (*FlipperController)(nil)
 
 type FlipperController struct {
 	Node2DImpl
-	actionName  StringName
+	keycode     Key
 	initialized bool
 	motorSpeed  float32
 	joint       PinJoint2D
@@ -29,10 +31,10 @@ func (f *FlipperController) GetParentClassName() string {
 }
 
 func (f *FlipperController) V_Ready() {
+	log.Info("FlipperController: _ready")
 	f.SetPhysicsProcess(true)
 	f.configureSide()
 	f.cacheNodes()
-	f.configureJoint()
 }
 
 func (f *FlipperController) V_PhysicsProcess(_delta float64) {
@@ -43,7 +45,7 @@ func (f *FlipperController) V_PhysicsProcess(_delta float64) {
 	if input == nil {
 		return
 	}
-	if input.IsActionPressed(f.actionName, true) {
+	if input.IsKeyPressed(f.keycode) {
 		f.joint.SetMotorTargetVelocity(f.motorSpeed)
 	} else {
 		f.joint.SetMotorTargetVelocity(0)
@@ -51,9 +53,7 @@ func (f *FlipperController) V_PhysicsProcess(_delta float64) {
 }
 
 func (f *FlipperController) V_ExitTree() {
-	if f.initialized {
-		f.actionName.Destroy()
-	}
+	f.initialized = false
 }
 
 func (f *FlipperController) configureSide() {
@@ -61,19 +61,26 @@ func (f *FlipperController) configureSide() {
 	isLeft := strings.Contains(strings.ToLower(name.ToUtf8()), "left")
 	name.Destroy()
 	if isLeft {
-		f.actionName = NewStringNameWithLatin1Chars(actionLeftFlipper)
+		f.keycode = KEY_LEFT
 		f.motorSpeed = 12.0
 	} else {
-		f.actionName = NewStringNameWithLatin1Chars(actionRightFlipper)
+		f.keycode = KEY_RIGHT
 		f.motorSpeed = -12.0
 	}
 	f.initialized = true
 }
 
 func (f *FlipperController) cacheNodes() {
-	bodyNode := f.GetNodeOrNull(nodePath("FlipperBody"))
-	jointNode := f.GetNodeOrNull(nodePath("FlipperJoint"))
-	anchorNode := f.GetNodeOrNull(nodePath("FlipperAnchor"))
+	bodyPath := nodePath("FlipperBody")
+	defer bodyPath.Destroy()
+	jointPath := nodePath("FlipperJoint")
+	defer jointPath.Destroy()
+	anchorPath := nodePath("FlipperAnchor")
+	defer anchorPath.Destroy()
+
+	bodyNode := f.GetNodeOrNull(bodyPath)
+	jointNode := f.GetNodeOrNull(jointPath)
+	anchorNode := f.GetNodeOrNull(anchorPath)
 	if bodyNode == nil || jointNode == nil || anchorNode == nil {
 		printLine("FlipperController: missing child nodes")
 		return
@@ -87,12 +94,6 @@ func (f *FlipperController) cacheNodes() {
 		return
 	}
 
-	anchorPath := f.joint.GetPathTo(anchor, false)
-	defer anchorPath.Destroy()
-	bodyPath := f.joint.GetPathTo(f.flipperBody, false)
-	defer bodyPath.Destroy()
-	f.joint.SetNodeA(anchorPath)
-	f.joint.SetNodeB(bodyPath)
 }
 
 func (f *FlipperController) configureJoint() {

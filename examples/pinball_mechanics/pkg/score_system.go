@@ -6,6 +6,7 @@ import (
 	. "github.com/godot-go/godot-go/pkg/builtin"
 	. "github.com/godot-go/godot-go/pkg/core"
 	. "github.com/godot-go/godot-go/pkg/gdclassimpl"
+	"github.com/godot-go/godot-go/pkg/log"
 )
 
 // ScoreSystem implements GDClass evidence.
@@ -25,7 +26,12 @@ func (s *ScoreSystem) GetParentClassName() string {
 }
 
 func (s *ScoreSystem) V_Ready() {
+	log.Info("ScoreSystem: _ready")
 	s.updateLabel()
+}
+
+func (s *ScoreSystem) V_MakeCustomTooltip(_forText String) Object {
+	return nil
 }
 
 func (s *ScoreSystem) OnBumperScored(points int64) {
@@ -63,6 +69,7 @@ func NewScoreSystemFromOwnerObject(owner *GodotObject) GDClass {
 func RegisterClassScoreSystem() {
 	ClassDBRegisterClass(NewScoreSystemFromOwnerObject, nil, nil, func(t *ScoreSystem) {
 		ClassDBBindMethodVirtual(t, "V_Ready", "_ready", nil, nil)
+		ClassDBBindMethodVirtual(t, "V_MakeCustomTooltip", "_make_custom_tooltip", []string{"for_text"}, nil)
 		ClassDBBindMethod(t, "OnBumperScored", "_on_bumper_scored", []string{"points"}, nil)
 		ClassDBBindMethod(t, "OnBallDrained", "_on_ball_drained", []string{"body"}, nil)
 	})
