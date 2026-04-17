@@ -247,3 +247,7 @@ pinball_run_debug: pinball_build
     GOTRACEBACK=crash \
     GODEBUG=cgocheck=1,asyncpreemptoff=1,invalidptr=1,clobberfree=1,tracebackancestors=5 \
     "{{ GODOT }}" --path "{{ PINBALL_PATH }}"
+
+fix:
+    just lint-fix
+    just fmt
